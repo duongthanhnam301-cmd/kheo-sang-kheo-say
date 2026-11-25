@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Khéo sàng khéo sảy – Đồng dao và hát ru Bắc Bộ</title>
+<meta name="description" content="Sách lật trang online: Khéo sàng khéo sảy – Đồng dao và hát ru Bắc Bộ.">
+<meta property="og:title" content="Khéo sàng khéo sảy – Đồng dao và hát ru Bắc Bộ">
+<meta property="og:description" content="Một tiếng à ơi, hai câu lục bát, một cái vỗ lưng thật chậm. Đọc sách lật trang online.">
+<meta property="og:image" content="pages/001.jpg">
+<meta property="og:type" content="book">
+<meta name="theme-color" content="#1b1442">
+<link rel="icon" href="pages/001.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Be+Vietnam+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#1b1442}
+a{color:#ffe98a}a:hover{color:#fff4c7}
+.kss *{box-sizing:border-box}
+.kss button{font-family:inherit;cursor:pointer}
+.kss button:focus-visible,.kss input:focus-visible{outline:3px solid #ffe98a;outline-offset:3px}
+/* ---------- ambient decor ---------- */
+.decor{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.star{position:absolute;border-radius:50%;background:#fff6cf;box-shadow:0 0 6px 1px rgba(255,240,180,.55);animation:twinkle 4s ease-in-out infinite}
+.star.big{box-shadow:0 0 10px 3px rgba(255,236,160,.55)}
+@keyframes twinkle{0%,100%{opacity:.25;transform:scale(.7)}50%{opacity:1;transform:scale(1.15)}}
+.sparkle{position:absolute;animation:spark 5.5s ease-in-out infinite;filter:drop-shadow(0 0 6px rgba(255,240,170,.8))}
+@keyframes spark{0%,100%{opacity:.15;transform:scale(.5) rotate(0)}50%{opacity:1;transform:scale(1) rotate(45deg)}}
+.moon{position:absolute;right:-130px;top:-170px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle at 42% 40%,#fffde6 0%,#fff3a6 48%,#f7dd78 70%,#f3cf62 100%);box-shadow:0 0 80px 30px rgba(255,236,150,.28),0 0 200px 90px rgba(255,220,140,.12);animation:glow 9s ease-in-out infinite;opacity:.92}
+.moon::after{content:"";position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle at 30% 62%,rgba(230,200,110,.35) 0 9%,transparent 10%),radial-gradient(circle at 58% 72%,rgba(230,200,110,.3) 0 6%,transparent 7%),radial-gradient(circle at 26% 30%,rgba(230,200,110,.25) 0 5%,transparent 6%)}
+@keyframes glow{0%,100%{box-shadow:0 0 80px 30px rgba(255,236,150,.26),0 0 200px 90px rgba(255,220,140,.1)}50%{box-shadow:0 0 110px 44px rgba(255,236,150,.36),0 0 240px 110px rgba(255,220,140,.16)}}
+.cloud{position:absolute;opacity:.9}
+.cloud svg{display:block;width:100%;height:auto}
+.c1{width:300px;left:-70px;bottom:-24px;animation:drift 38s ease-in-out infinite alternate}
+.c2{width:240px;left:7%;bottom:-46px;opacity:.85;animation:drift 46s ease-in-out infinite alternate-reverse}
+.c3{width:260px;right:-60px;bottom:-30px;animation:drift 42s ease-in-out infinite alternate-reverse}
+.c4{width:200px;right:12%;bottom:-54px;opacity:.8;animation:drift 52s ease-in-out infinite alternate}
+.c5{width:190px;left:-50px;top:96px;opacity:.55;animation:drift 60s ease-in-out infinite alternate}
+@keyframes drift{0%{transform:translate(0,0)}50%{transform:translate(46px,-8px)}100%{transform:translate(90px,0)}}
+.note{position:absolute;bottom:-60px;opacity:0;animation:rise 16s linear infinite}
+.note svg{display:block;width:100%;height:auto;filter:drop-shadow(0 0 6px rgba(255,255,255,.25))}
+@keyframes rise{0%{transform:translate(0,0) rotate(-8deg);opacity:0}10%{opacity:.85}50%{transform:translate(26px,-48vh) rotate(10deg)}85%{opacity:.6}100%{transform:translate(-8px,-96vh) rotate(-6deg);opacity:0}}
+.still .star,.still .sparkle,.still .moon,.still .cloud,.still .note{animation-play-state:paused}
+@media (prefers-reduced-motion: reduce){.star,.sparkle,.moon,.cloud,.note{animation:none!important}.note{display:none}}
+/* ---------- book ---------- */
+.stage{perspective:2600px}
+.book{position:relative;transition:transform .85s cubic-bezier(.45,.05,.3,1)}
+.book.double{width:min(94vw,calc((100vh - 200px) * 1.4085));aspect-ratio:1.4085}
+.book.single{width:min(90vw,calc((100vh - 200px) * .7042));aspect-ratio:.7042}
+.half{position:absolute;top:0;bottom:0;width:50%;overflow:hidden;background:#fffaf0}
+.double .half.l{left:0;border-radius:6px 0 0 6px}
+.double .half.r{right:0;border-radius:0 6px 6px 0}
+.single .half{left:0;width:100%;border-radius:4px 8px 8px 4px}
+.half.empty{background:transparent}
+.half img,.face img{display:block;width:100%;height:100%;object-fit:cover;user-select:none;-webkit-user-drag:none}
+.double .half.l::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(to left,rgba(40,20,60,.28) 0,rgba(40,20,60,.08) 3.5%,rgba(255,255,255,0) 9%)}
+.double .half.r::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(to right,rgba(40,20,60,.3) 0,rgba(40,20,60,.08) 3.5%,rgba(255,255,255,0) 9%)}
+.single .half::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(to right,rgba(40,20,60,.22) 0,rgba(255,255,255,0) 5%)}
+.bookshadow{position:absolute;left:3%;right:3%;bottom:-26px;height:40px;border-radius:50%;background:radial-gradient(ellipse at center,rgba(8,4,24,.6),rgba(8,4,24,0) 70%);filter:blur(4px)}
+.leaf{position:absolute;top:0;bottom:0;width:50%;transform-style:preserve-3d;z-index:5;animation-duration:.85s;animation-timing-function:cubic-bezier(.45,.05,.3,1);animation-fill-mode:both}
+.leaf.nd{left:50%;transform-origin:left center;animation-name:turnNext}
+.leaf.pd{left:0;transform-origin:right center;animation-name:turnPrev}
+.single .leaf{left:0;width:100%;transform-origin:left center}
+.leaf.ns{animation-name:turnNextS}
+.leaf.ps{animation-name:turnPrevS}
+@keyframes turnNext{from{transform:rotateY(0)}to{transform:rotateY(-180deg)}}
+@keyframes turnPrev{from{transform:rotateY(0)}to{transform:rotateY(180deg)}}
+@keyframes turnNextS{0%{transform:rotateY(0);opacity:1}70%{opacity:1}100%{transform:rotateY(-180deg);opacity:0}}
+@keyframes turnPrevS{0%{transform:rotateY(-180deg);opacity:0}30%{opacity:1}100%{transform:rotateY(0);opacity:1}}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;overflow:hidden;background:#fffaf0}
+.face.back{transform:rotateY(180deg)}
+.face.paper{background:linear-gradient(to left,#f3e9d2,#fffaf0 40%)}
+.face .shade{position:absolute;inset:0;pointer-events:none;animation:shadeIn .85s ease-in-out both}
+.face.front .shade{background:linear-gradient(to left,rgba(30,10,50,.38),rgba(30,10,50,0) 60%)}
+.leaf.pd .face.front .shade{background:linear-gradient(to right,rgba(30,10,50,.38),rgba(30,10,50,0) 60%)}
+.face.back .shade{background:linear-gradient(to right,rgba(30,10,50,.38),rgba(30,10,50,0) 60%);animation-name:shadeOut}
+.leaf.pd .face.back .shade{background:linear-gradient(to left,rgba(30,10,50,.38),rgba(30,10,50,0) 60%)}
+@keyframes shadeIn{0%{opacity:0}50%{opacity:1}100%{opacity:1}}
+@keyframes shadeOut{0%{opacity:1}50%{opacity:1}100%{opacity:0}}
+.hit{position:absolute;top:0;bottom:0;width:50%;background:transparent;border:0;padding:0;z-index:8}
+.hit.l{left:0;cursor:w-resize}.hit.r{right:0;cursor:e-resize}
+.hit:disabled{cursor:default}
+.hit:not(:disabled):hover{background:radial-gradient(ellipse at var(--hx) 50%,rgba(255,240,180,.10),rgba(255,240,180,0) 55%)}
+.hit.l{--hx:0%}.hit.r{--hx:100%}
+.corner{position:absolute;bottom:0;width:46px;height:46px;pointer-events:none;z-index:6;opacity:.85;transition:opacity .3s}
+.corner.r{right:0;background:linear-gradient(135deg,rgba(255,255,255,0) 50%,rgba(240,226,196,.95) 51%,#fffaf0 100%);border-radius:0 0 6px 0;box-shadow:-2px -2px 6px rgba(40,20,60,.18);animation:peel 3.6s ease-in-out infinite}
+@keyframes peel{0%,100%{width:30px;height:30px}50%{width:44px;height:44px}}
+.still .corner{animation:none}
+
+/* ---------- per-page motion ---------- */
+.fxlayer{position:absolute;inset:0;pointer-events:none;z-index:3;overflow:hidden}
+.fx{position:absolute;transform:translate(-50%,-50%);display:block}
+.fx.full{left:0!important;top:0!important;width:100%!important;height:100%;transform:none}
+.fxi{display:block;width:100%;animation-fill-mode:both}
+.fxi svg{display:block;width:100%;height:auto;overflow:visible}
+.fxi.spark{animation-fill-mode:both,none;animation-name:fxPop,fxTw;animation-duration:.7s,3.2s;animation-timing-function:cubic-bezier(.3,1.6,.5,1),ease-in-out;animation-iteration-count:1,infinite;filter:drop-shadow(0 0 4px rgba(255,240,170,.9))}
+.fxi.star{animation-fill-mode:both,none;animation-name:fxPop,fxTw;animation-duration:.9s,4.4s;animation-timing-function:ease-out,ease-in-out;animation-iteration-count:1,infinite;filter:drop-shadow(0 0 5px rgba(255,245,200,.95))}
+.fxi.note{animation-fill-mode:both,none;animation-name:fxPop,fxBob;animation-duration:.8s,3.4s;animation-timing-function:cubic-bezier(.3,1.6,.5,1),ease-in-out;animation-iteration-count:1,infinite;filter:drop-shadow(0 2px 3px rgba(40,20,60,.25))}
+.fxi.rise{animation-name:fxRise;animation-duration:6.5s;animation-timing-function:ease-in-out;animation-iteration-count:infinite;filter:drop-shadow(0 0 4px rgba(255,255,255,.5))}
+.fxi.halo{aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(255,246,190,0) 55%,rgba(255,240,160,.35) 68%,rgba(255,240,160,0) 76%);animation-name:fxHalo;animation-duration:4.5s;animation-timing-function:ease-in-out;animation-iteration-count:infinite}
+.fxi.sweep{height:100%;background:linear-gradient(105deg,rgba(255,255,255,0) 40%,rgba(255,252,235,.55) 50%,rgba(255,255,255,0) 60%);background-size:300% 100%;background-repeat:no-repeat;animation-name:fxSweep;animation-duration:1.5s;animation-timing-function:ease-out;opacity:0}
+@keyframes fxPop{0%{opacity:0;transform:scale(0) rotate(-30deg)}100%{opacity:1;transform:scale(1) rotate(0)}}
+@keyframes fxTw{0%,100%{opacity:1;transform:scale(1) rotate(0)}50%{opacity:.35;transform:scale(.6) rotate(20deg)}}
+@keyframes fxBob{0%,100%{transform:translateY(0) rotate(-6deg)}25%{transform:translateY(-18%) rotate(4deg)}50%{transform:translateY(0) rotate(-2deg)}75%{transform:translateY(-8%) rotate(6deg)}}
+@keyframes fxRise{0%{opacity:0;transform:translate(0,0) rotate(-8deg)}15%{opacity:.95}80%{opacity:.7}100%{opacity:0;transform:translate(30%,-520%) rotate(10deg)}}
+@keyframes fxHalo{0%,100%{opacity:.55;transform:scale(.97)}50%{opacity:1;transform:scale(1.04)}}
+@keyframes fxSweep{0%{opacity:1;background-position:100% 0}100%{opacity:1;background-position:0 0}}
+.still .fxi{animation-play-state:paused}
+@media (prefers-reduced-motion: reduce){.fxlayer{display:none}}
+
+/* ---------- living pages: real book elements in motion ---------- */
+.live{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:2}
+.lvb,.lvl{position:absolute;display:block;background-repeat:no-repeat}
+.lvb{inset:0}
+.lvl{animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-fill-mode:backwards;will-change:transform}
+.m-drift-r{animation-name:lvDriftR;animation-duration:10s;transform-origin:100% 50%}
+.m-drift-l{animation-name:lvDriftL;animation-duration:9s;transform-origin:0 50%}
+.m-drift-b{animation-name:lvDriftB;animation-duration:11s;transform-origin:50% 100%}
+.m-drift-t{animation-name:lvDriftT;animation-duration:10s;transform-origin:50% 0}
+.m-float{animation-name:lvFloat;animation-duration:6.5s}
+.m-sway{animation-name:lvSway;animation-duration:3.6s;transform-origin:50% 97%}
+.m-swing{animation-name:lvSwing;animation-duration:4.2s;transform-origin:50% 6%}
+.m-bob{animation-name:lvBob;animation-duration:3.8s}
+.m-hop{animation-name:lvHop;animation-duration:2.8s;transform-origin:50% 100%}
+.m-wobble{animation-name:lvWobble;animation-duration:3s;transform-origin:50% 92%}
+.m-twinkle{animation-name:lvTwinkle;animation-duration:3.2s}
+.m-wave{animation-name:lvWave;animation-duration:5.5s;transform-origin:50% 50%}
+.m-chug{animation-name:lvChug;animation-duration:1.1s}
+.m-breathe-l{animation-name:lvBreathe;animation-duration:6s;transform-origin:0 50%}
+.m-breathe-r{animation-name:lvBreathe;animation-duration:6s;transform-origin:100% 50%}
+.m-breathe-t{animation-name:lvBreathe;animation-duration:6s;transform-origin:50% 0}
+.m-breathe-b{animation-name:lvBreathe;animation-duration:6s;transform-origin:50% 100%}
+@keyframes lvDriftR{0%,100%{transform:translate(0,0)}50%{transform:translate(4%,-2%)}}
+@keyframes lvDriftL{0%,100%{transform:translate(0,0) rotate(0)}50%{transform:translate(-6%,1.5%) rotate(-1.5deg)}}
+@keyframes lvDriftB{0%,100%{transform:translate(0,0)}50%{transform:translate(2.5%,4%)}}
+@keyframes lvDriftT{0%,100%{transform:translate(0,0)}50%{transform:translate(2.5%,-4%)}}
+@keyframes lvFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-2.2%)}}
+@keyframes lvSway{0%,100%{transform:rotate(0)}25%{transform:rotate(-1.6deg)}75%{transform:rotate(1.6deg)}}
+@keyframes lvSwing{0%,100%{transform:rotate(0)}25%{transform:rotate(1.8deg)}75%{transform:rotate(-1.8deg)}}
+@keyframes lvBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-3%)}}
+@keyframes lvHop{0%,40%,100%{transform:translateY(0) scale(1,1)}12%{transform:translateY(0) scale(1.04,.95)}24%{transform:translateY(-9%) scale(.98,1.03)}34%{transform:translateY(0) scale(1.03,.97)}}
+@keyframes lvWobble{0%,100%{transform:rotate(0)}25%{transform:rotate(-4deg)}75%{transform:rotate(4deg)}}
+@keyframes lvTwinkle{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45;transform:scale(.92)}}
+@keyframes lvWave{0%,100%{transform:translateY(0) skewY(0)}25%{transform:translateY(-1.6%) skewY(1.2deg)}75%{transform:translateY(1.6%) skewY(-1.2deg)}}
+@keyframes lvChug{0%,100%{transform:translate(0,0)}50%{transform:translate(.5%,-.7%)}}
+@keyframes lvBreathe{0%,100%{transform:scale(1)}50%{transform:scale(1.025)}}
+.still .lvl{animation-play-state:paused}
+@media (prefers-reduced-motion: reduce){.lvl{animation:none!important}}
+.lv-001{background-image:url(live/lv-001.webp)}
+.lv-004{background-image:url(live/lv-004.webp)}
+.lv-005{background-image:url(live/lv-005.webp)}
+.lv-017{background-image:url(live/lv-017.webp)}
+.lv-025{background-image:url(live/lv-025.webp)}
+.lv-027{background-image:url(live/lv-027.webp)}
+.lv-060{background-image:url(live/lv-060.webp)}
+.lv-078{background-image:url(live/lv-078.webp)}
+.lv-079{background-image:url(live/lv-079.webp)}
+.lv-082{background-image:url(live/lv-082.webp)}
+.lv-083{background-image:url(live/lv-083.webp)}
+.lv-084{background-image:url(live/lv-084.webp)}
+.lv-085{background-image:url(live/lv-085.webp)}
+.lv-086{background-image:url(live/lv-086.webp)}
+.lv-087{background-image:url(live/lv-087.webp)}
+.lv-088{background-image:url(live/lv-088.webp)}
+.lv-089{background-image:url(live/lv-089.webp)}
+.lv-092{background-image:url(live/lv-092.webp)}
+.lv-094{background-image:url(live/lv-094.webp)}
+.lv-095{background-image:url(live/lv-095.webp)}
+.lv-097{background-image:url(live/lv-097.webp)}
+.lv-098{background-image:url(live/lv-098.webp)}
+.lv-099{background-image:url(live/lv-099.webp)}
+.lv-100{background-image:url(live/lv-100.webp)}
+.lv-101{background-image:url(live/lv-101.webp)}
+.lv-102{background-image:url(live/lv-102.webp)}
+.lv-103{background-image:url(live/lv-103.webp)}
+.lv-104{background-image:url(live/lv-104.webp)}
+.lv-105{background-image:url(live/lv-105.webp)}
+.lv-106{background-image:url(live/lv-106.webp)}
+.lv-107{background-image:url(live/lv-107.webp)}
+.lv-108{background-image:url(live/lv-108.webp)}
+.lv-109{background-image:url(live/lv-109.webp)}
+.lv-110{background-image:url(live/lv-110.webp)}
+.lv-111{background-image:url(live/lv-111.webp)}
+.lv-112{background-image:url(live/lv-112.webp)}
+.lv-113{background-image:url(live/lv-113.webp)}
+.lv-114{background-image:url(live/lv-114.webp)}
+.lv-115{background-image:url(live/lv-115.webp)}
+.lv-116{background-image:url(live/lv-116.webp)}
+.lv-117{background-image:url(live/lv-117.webp)}
+.lv-118{background-image:url(live/lv-118.webp)}
+.lv-120{background-image:url(live/lv-120.webp)}
+.lv-121{background-image:url(live/lv-121.webp)}
+.lv-122{background-image:url(live/lv-122.webp)}
+/* ---------- controls ---------- */
+.ctl{min-width:48px;min-height:48px;border-radius:999px;border:1.5px solid rgba(255,244,199,.35);background:rgba(27,18,66,.55);color:#fff4c7;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:0 16px;font-size:15px;font-weight:600;transition:background .2s,transform .2s,border-color .2s;backdrop-filter:blur(6px)}
+.ctl:hover:not(:disabled){background:rgba(60,40,120,.75);border-color:rgba(255,244,199,.6);transform:translateY(-1px)}
+.ctl:disabled{opacity:.35;cursor:default}
+.ctl.main{background:#ffe98a;color:#2a1650;border-color:#ffe98a;padding:0;width:52px;height:52px;box-shadow:0 6px 22px rgba(255,220,120,.28)}
+.ctl.main:hover:not(:disabled){background:#fff2b3}
+.range{-webkit-appearance:none;appearance:none;height:6px;border-radius:99px;background:linear-gradient(90deg,#f39ac7 0,#ffe98a var(--pct),rgba(255,255,255,.18) var(--pct));outline:none}
+.range::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:#fff4c7;border:3px solid #c2307f;box-shadow:0 0 10px rgba(255,230,150,.6);cursor:pointer}
+.range::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:#fff4c7;border:3px solid #c2307f;cursor:pointer}
+.scrim{position:fixed;inset:0;background:rgba(12,6,30,.55);z-index:40;animation:fade .3s ease both;border:0;padding:0;width:100%}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(420px,92vw);z-index:41;background:#fffaf0;color:#2a1650;overflow-y:auto;animation:slideIn .45s cubic-bezier(.2,.8,.2,1) both;box-shadow:-20px 0 60px rgba(10,4,30,.45)}
+@keyframes slideIn{from{transform:translateX(100%)}to{transform:translateX(0)}}
+.ti{display:flex;width:100%;align-items:baseline;gap:12px;justify-content:space-between;text-align:left;background:transparent;border:0;border-radius:10px;padding:10px 12px;min-height:44px;color:#2a1650;font-size:15px;line-height:1.35;transition:background .15s}
+.ti:hover{background:#f6e9ff}
+.ti .pg{font-variant-numeric:tabular-nums;color:#7a3b6e;font-size:13px;font-weight:600;flex:none}
+.chip{border:1.5px solid #e4c7ee;background:#fff;color:#5b2a6e;border-radius:999px;padding:8px 14px;min-height:40px;font-size:14px;font-weight:600;transition:background .15s}
+.chip:hover{background:#f6e9ff}
+.title-ani{animation:floaty 6s ease-in-out infinite}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+@media (max-width:720px){.hide-sm{display:none!important}.moon{width:200px;height:200px;right:-90px;top:-110px}}
+
+.kss{position:relative;min-height:100vh;min-height:100dvh;overflow:hidden;display:flex;flex-direction:column;font-family:'Be Vietnam Pro',system-ui,sans-serif;color:#fff4c7;background:radial-gradient(120% 70% at 50% 115%,#8e2a7e 0%,rgba(142,42,126,0) 60%),radial-gradient(80% 60% at 12% 0%,#3a2b85 0%,rgba(58,43,133,0) 70%),linear-gradient(180deg,#17113d 0%,#241556 45%,#3a1a5e 100%)}
+.hide{display:none!important}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+</style>
+</head>
+<body>
+<div class="kss" id="app">
+<div class="decor" aria-hidden="true">
+<div class="moon"></div>
+<span class="star big" style="left: 32.7%; top: 14.7%; width: 5px; height: 5px; animation-duration: 2.7s; animation-delay: -4.9s"></span>
+<span class="star big" style="left: 10.2%; top: 54.0%; width: 4px; height: 4px; animation-duration: 3.3s; animation-delay: -0.5s"></span>
+<span class="star big" style="left: 42.0%; top: 22.9%; width: 4px; height: 4px; animation-duration: 4.0s; animation-delay: -5.0s"></span>
+<span class="star big" style="left: 13.1%; top: 21.3%; width: 5px; height: 5px; animation-duration: 4.5s; animation-delay: -0.4s"></span>
+<span class="star" style="left: 58.4%; top: 5.5%; width: 2px; height: 2px; animation-duration: 2.7s; animation-delay: -5.2s"></span>
+<span class="star" style="left: 29.4%; top: 14.1%; width: 2px; height: 2px; animation-duration: 4.5s; animation-delay: -3.4s"></span>
+<span class="star big" style="left: 67.8%; top: 10.4%; width: 4px; height: 4px; animation-duration: 4.7s; animation-delay: -2.2s"></span>
+<span class="star" style="left: 54.7%; top: 6.7%; width: 2px; height: 2px; animation-duration: 4.7s; animation-delay: -3.0s"></span>
+<span class="star" style="left: 53.1%; top: 71.7%; width: 3px; height: 3px; animation-duration: 4.5s; animation-delay: -2.7s"></span>
+<span class="star big" style="left: 30.4%; top: 73.3%; width: 5px; height: 5px; animation-duration: 5.2s; animation-delay: -0.5s"></span>
+<span class="star" style="left: 30.4%; top: 46.1%; width: 3px; height: 3px; animation-duration: 5.1s; animation-delay: -1.7s"></span>
+<span class="star" style="left: 97.1%; top: 11.7%; width: 3px; height: 3px; animation-duration: 3.1s; animation-delay: -2.1s"></span>
+<span class="star big" style="left: 92.5%; top: 39.4%; width: 5px; height: 5px; animation-duration: 2.8s; animation-delay: -3.3s"></span>
+<span class="star" style="left: 78.3%; top: 75.5%; width: 3px; height: 3px; animation-duration: 4.9s; animation-delay: -3.6s"></span>
+<span class="star" style="left: 57.8%; top: 42.5%; width: 2px; height: 2px; animation-duration: 5.8s; animation-delay: -2.8s"></span>
+<span class="star big" style="left: 66.1%; top: 6.5%; width: 5px; height: 5px; animation-duration: 3.6s; animation-delay: -3.5s"></span>
+<span class="star big" style="left: 67.8%; top: 41.6%; width: 5px; height: 5px; animation-duration: 3.9s; animation-delay: -4.0s"></span>
+<span class="star" style="left: 3.2%; top: 43.0%; width: 2px; height: 2px; animation-duration: 4.6s; animation-delay: -3.0s"></span>
+<span class="star big" style="left: 22.4%; top: 27.2%; width: 5px; height: 5px; animation-duration: 3.4s; animation-delay: -2.3s"></span>
+<span class="star" style="left: 86.4%; top: 8.3%; width: 3px; height: 3px; animation-duration: 3.9s; animation-delay: -1.7s"></span>
+<span class="star big" style="left: 14.4%; top: 40.2%; width: 4px; height: 4px; animation-duration: 3.5s; animation-delay: -2.5s"></span>
+<span class="star" style="left: 36.2%; top: 81.5%; width: 2px; height: 2px; animation-duration: 3.0s; animation-delay: -1.1s"></span>
+<span class="star" style="left: 23.7%; top: 22.2%; width: 3px; height: 3px; animation-duration: 5.4s; animation-delay: -1.1s"></span>
+<span class="star big" style="left: 28.6%; top: 14.3%; width: 4px; height: 4px; animation-duration: 3.8s; animation-delay: -3.4s"></span>
+<span class="star big" style="left: 94.4%; top: 63.8%; width: 4px; height: 4px; animation-duration: 5.8s; animation-delay: -3.9s"></span>
+<span class="star big" style="left: 73.5%; top: 42.6%; width: 5px; height: 5px; animation-duration: 5.3s; animation-delay: -2.4s"></span>
+<span class="star big" style="left: 40.1%; top: 10.4%; width: 5px; height: 5px; animation-duration: 3.9s; animation-delay: -1.1s"></span>
+<span class="star" style="left: 97.5%; top: 41.1%; width: 2px; height: 2px; animation-duration: 3.7s; animation-delay: -0.3s"></span>
+<span class="star" style="left: 1.0%; top: 14.8%; width: 2px; height: 2px; animation-duration: 5.8s; animation-delay: -3.7s"></span>
+<span class="star" style="left: 7.9%; top: 19.9%; width: 3px; height: 3px; animation-duration: 3.0s; animation-delay: -1.5s"></span>
+<span class="star" style="left: 35.0%; top: 34.1%; width: 2px; height: 2px; animation-duration: 2.9s; animation-delay: -2.9s"></span>
+<span class="star" style="left: 96.8%; top: 44.7%; width: 3px; height: 3px; animation-duration: 2.8s; animation-delay: -0.6s"></span>
+<span class="star big" style="left: 34.6%; top: 25.1%; width: 5px; height: 5px; animation-duration: 3.1s; animation-delay: -0.1s"></span>
+<span class="star" style="left: 94.2%; top: 49.1%; width: 2px; height: 2px; animation-duration: 4.9s; animation-delay: -5.5s"></span>
+<span class="star big" style="left: 75.3%; top: 28.1%; width: 5px; height: 5px; animation-duration: 5.5s; animation-delay: -4.2s"></span>
+<span class="star" style="left: 26.6%; top: 34.4%; width: 2px; height: 2px; animation-duration: 3.7s; animation-delay: -1.3s"></span>
+<span class="star big" style="left: 54.1%; top: 46.7%; width: 5px; height: 5px; animation-duration: 3.3s; animation-delay: -4.9s"></span>
+<span class="star" style="left: 97.5%; top: 78.6%; width: 2px; height: 2px; animation-duration: 5.4s; animation-delay: -4.4s"></span>
+<span class="star" style="left: 23.2%; top: 48.1%; width: 3px; height: 3px; animation-duration: 5.1s; animation-delay: -5.9s"></span>
+<span class="star" style="left: 78.4%; top: 44.0%; width: 2px; height: 2px; animation-duration: 4.9s; animation-delay: -5.7s"></span>
+<span class="star" style="left: 44.8%; top: 86.3%; width: 3px; height: 3px; animation-duration: 5.8s; animation-delay: -2.2s"></span>
+<span class="star" style="left: 22.6%; top: 21.6%; width: 2px; height: 2px; animation-duration: 3.7s; animation-delay: -2.9s"></span>
+<span class="star" style="left: 97.6%; top: 56.5%; width: 2px; height: 2px; animation-duration: 4.2s; animation-delay: -3.9s"></span>
+<span class="star big" style="left: 79.4%; top: 8.7%; width: 5px; height: 5px; animation-duration: 2.9s; animation-delay: -2.3s"></span>
+<span class="star" style="left: 70.7%; top: 19.1%; width: 2px; height: 2px; animation-duration: 4.0s; animation-delay: -3.8s"></span>
+<span class="star big" style="left: 9.5%; top: 87.1%; width: 5px; height: 5px; animation-duration: 3.9s; animation-delay: -2.4s"></span>
+<svg class="sparkle" style="left: 8%; top: 18%; width: 18px; height: 18px; animation-delay: -0s" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0 C13 8 16 11 24 12 C16 13 13 16 12 24 C11 16 8 13 0 12 C8 11 11 8 12 0Z" fill="#fff3b0"></path></svg><svg class="sparkle" style="left: 91%; top: 62%; width: 14px; height: 14px; animation-delay: -1.5s" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0 C13 8 16 11 24 12 C16 13 13 16 12 24 C11 16 8 13 0 12 C8 11 11 8 12 0Z" fill="#fff3b0"></path></svg><svg class="sparkle" style="left: 15%; top: 78%; width: 12px; height: 12px; animation-delay: -3s" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0 C13 8 16 11 24 12 C16 13 13 16 12 24 C11 16 8 13 0 12 C8 11 11 8 12 0Z" fill="#fff3b0"></path></svg><svg class="sparkle" style="left: 82%; top: 12%; width: 16px; height: 16px; animation-delay: -2.2s" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0 C13 8 16 11 24 12 C16 13 13 16 12 24 C11 16 8 13 0 12 C8 11 11 8 12 0Z" fill="#fff3b0"></path></svg><svg class="sparkle" style="left: 48%; top: 6%; width: 10px; height: 10px; animation-delay: -4s" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0 C13 8 16 11 24 12 C16 13 13 16 12 24 C11 16 8 13 0 12 C8 11 11 8 12 0Z" fill="#fff3b0"></path></svg><svg class="sparkle" style="left: 96%; top: 32%; width: 12px; height: 12px; animation-delay: -0.8s" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0 C13 8 16 11 24 12 C16 13 13 16 12 24 C11 16 8 13 0 12 C8 11 11 8 12 0Z" fill="#fff3b0"></path></svg>
+<div class="note" style="left: 6%; width: 30px; animation-duration: 14s; animation-delay: -0s"><svg viewBox="0 0 40 56" aria-hidden="true"><path d="M14 44 L14 6 L36 2 L36 12 L18 15 L18 44" fill="#8fdde0"></path><ellipse cx="10" cy="45" rx="9" ry="7" fill="#8fdde0" transform="rotate(-20 10 45)"></ellipse></svg></div><div class="note" style="left: 18%; width: 36px; animation-duration: 17s; animation-delay: -5s"><svg viewBox="0 0 56 56" aria-hidden="true"><path d="M16 42 L16 10 L48 4 L48 36" fill="none" stroke="#ffd86b" stroke-width="5" stroke-linejoin="round"></path><path d="M16 10 L48 4 L48 13 L16 19Z" fill="#ffd86b"></path><ellipse cx="11" cy="43" rx="9" ry="7" fill="#ffd86b" transform="rotate(-20 11 43)"></ellipse><ellipse cx="43" cy="37" rx="9" ry="7" fill="#ffd86b" transform="rotate(-20 43 37)"></ellipse></svg></div><div class="note" style="left: 88%; width: 28px; animation-duration: 15s; animation-delay: -2s"><svg viewBox="0 0 40 56" aria-hidden="true"><path d="M14 44 L14 6 L36 2 L36 12 L18 15 L18 44" fill="#f39ac7"></path><ellipse cx="10" cy="45" rx="9" ry="7" fill="#f39ac7" transform="rotate(-20 10 45)"></ellipse></svg></div><div class="note" style="left: 94%; width: 34px; animation-duration: 19s; animation-delay: -9s"><svg viewBox="0 0 56 56" aria-hidden="true"><path d="M16 42 L16 10 L48 4 L48 36" fill="none" stroke="#8fdde0" stroke-width="5" stroke-linejoin="round"></path><path d="M16 10 L48 4 L48 13 L16 19Z" fill="#8fdde0"></path><ellipse cx="11" cy="43" rx="9" ry="7" fill="#8fdde0" transform="rotate(-20 11 43)"></ellipse><ellipse cx="43" cy="37" rx="9" ry="7" fill="#8fdde0" transform="rotate(-20 43 37)"></ellipse></svg></div><div class="note" style="left: 76%; width: 24px; animation-duration: 16s; animation-delay: -11s"><svg viewBox="0 0 40 56" aria-hidden="true"><path d="M14 44 L14 6 L36 2 L36 12 L18 15 L18 44" fill="#ffd86b"></path><ellipse cx="10" cy="45" rx="9" ry="7" fill="#ffd86b" transform="rotate(-20 10 45)"></ellipse></svg></div><div class="note" style="left: 3%; width: 26px; animation-duration: 18s; animation-delay: -13s"><svg viewBox="0 0 56 56" aria-hidden="true"><path d="M16 42 L16 10 L48 4 L48 36" fill="none" stroke="#f39ac7" stroke-width="5" stroke-linejoin="round"></path><path d="M16 10 L48 4 L48 13 L16 19Z" fill="#f39ac7"></path><ellipse cx="11" cy="43" rx="9" ry="7" fill="#f39ac7" transform="rotate(-20 11 43)"></ellipse><ellipse cx="43" cy="37" rx="9" ry="7" fill="#f39ac7" transform="rotate(-20 43 37)"></ellipse></svg></div><div class="note" style="left: 60%; width: 22px; animation-duration: 20s; animation-delay: -7s"><svg viewBox="0 0 40 56" aria-hidden="true"><path d="M14 44 L14 6 L36 2 L36 12 L18 15 L18 44" fill="#b9a2f0"></path><ellipse cx="10" cy="45" rx="9" ry="7" fill="#b9a2f0" transform="rotate(-20 10 45)"></ellipse></svg></div>
+<div class="cloud c1"><svg viewBox="0 0 320 150" aria-hidden="true"><path d="M30 120 C5 120 2 88 28 82 C24 52 62 40 82 58 C92 22 150 14 168 50 C186 26 232 30 236 66 C262 54 298 70 290 98 C312 102 314 122 292 124 Z" fill="#8fdde0" stroke="#3d86a6" stroke-width="5" stroke-linejoin="round"></path><path d="M98 96 C98 80 122 78 124 92 C126 102 112 104 110 96" fill="none" stroke="#3d86a6" stroke-width="4.5" stroke-linecap="round"></path><path d="M178 92 C176 72 208 68 212 86 C214 98 196 102 194 92" fill="none" stroke="#3d86a6" stroke-width="4.5" stroke-linecap="round"></path><path d="M48 104 C70 108 92 104 104 112" fill="none" stroke="#3d86a6" stroke-width="4" stroke-linecap="round" opacity=".7"></path><path d="M228 106 C248 102 266 106 280 112" fill="none" stroke="#3d86a6" stroke-width="4" stroke-linecap="round" opacity=".7"></path></svg></div><div class="cloud c2"><svg viewBox="0 0 320 150" aria-hidden="true"><path d="M30 120 C5 120 2 88 28 82 C24 52 62 40 82 58 C92 22 150 14 168 50 C186 26 232 30 236 66 C262 54 298 70 290 98 C312 102 314 122 292 124 Z" fill="#a68ae0" stroke="#5b3f9e" stroke-width="5" stroke-linejoin="round"></path><path d="M98 96 C98 80 122 78 124 92 C126 102 112 104 110 96" fill="none" stroke="#5b3f9e" stroke-width="4.5" stroke-linecap="round"></path><path d="M178 92 C176 72 208 68 212 86 C214 98 196 102 194 92" fill="none" stroke="#5b3f9e" stroke-width="4.5" stroke-linecap="round"></path><path d="M48 104 C70 108 92 104 104 112" fill="none" stroke="#5b3f9e" stroke-width="4" stroke-linecap="round" opacity=".7"></path><path d="M228 106 C248 102 266 106 280 112" fill="none" stroke="#5b3f9e" stroke-width="4" stroke-linecap="round" opacity=".7"></path></svg></div><div class="cloud c3"><svg viewBox="0 0 320 150" aria-hidden="true"><path d="M30 120 C5 120 2 88 28 82 C24 52 62 40 82 58 C92 22 150 14 168 50 C186 26 232 30 236 66 C262 54 298 70 290 98 C312 102 314 122 292 124 Z" fill="#f08fc0" stroke="#9c2f72" stroke-width="5" stroke-linejoin="round"></path><path d="M98 96 C98 80 122 78 124 92 C126 102 112 104 110 96" fill="none" stroke="#9c2f72" stroke-width="4.5" stroke-linecap="round"></path><path d="M178 92 C176 72 208 68 212 86 C214 98 196 102 194 92" fill="none" stroke="#9c2f72" stroke-width="4.5" stroke-linecap="round"></path><path d="M48 104 C70 108 92 104 104 112" fill="none" stroke="#9c2f72" stroke-width="4" stroke-linecap="round" opacity=".7"></path><path d="M228 106 C248 102 266 106 280 112" fill="none" stroke="#9c2f72" stroke-width="4" stroke-linecap="round" opacity=".7"></path></svg></div><div class="cloud c4"><svg viewBox="0 0 320 150" aria-hidden="true"><path d="M30 120 C5 120 2 88 28 82 C24 52 62 40 82 58 C92 22 150 14 168 50 C186 26 232 30 236 66 C262 54 298 70 290 98 C312 102 314 122 292 124 Z" fill="#8fdde0" stroke="#3d86a6" stroke-width="5" stroke-linejoin="round"></path><path d="M98 96 C98 80 122 78 124 92 C126 102 112 104 110 96" fill="none" stroke="#3d86a6" stroke-width="4.5" stroke-linecap="round"></path><path d="M178 92 C176 72 208 68 212 86 C214 98 196 102 194 92" fill="none" stroke="#3d86a6" stroke-width="4.5" stroke-linecap="round"></path><path d="M48 104 C70 108 92 104 104 112" fill="none" stroke="#3d86a6" stroke-width="4" stroke-linecap="round" opacity=".7"></path><path d="M228 106 C248 102 266 106 280 112" fill="none" stroke="#3d86a6" stroke-width="4" stroke-linecap="round" opacity=".7"></path></svg></div><div class="cloud c5"><svg viewBox="0 0 320 150" aria-hidden="true"><path d="M30 120 C5 120 2 88 28 82 C24 52 62 40 82 58 C92 22 150 14 168 50 C186 26 232 30 236 66 C262 54 298 70 290 98 C312 102 314 122 292 124 Z" fill="#a68ae0" stroke="#5b3f9e" stroke-width="5" stroke-linejoin="round"></path><path d="M98 96 C98 80 122 78 124 92 C126 102 112 104 110 96" fill="none" stroke="#5b3f9e" stroke-width="4.5" stroke-linecap="round"></path><path d="M178 92 C176 72 208 68 212 86 C214 98 196 102 194 92" fill="none" stroke="#5b3f9e" stroke-width="4.5" stroke-linecap="round"></path><path d="M48 104 C70 108 92 104 104 112" fill="none" stroke="#5b3f9e" stroke-width="4" stroke-linecap="round" opacity=".7"></path><path d="M228 106 C248 102 266 106 280 112" fill="none" stroke="#5b3f9e" stroke-width="4" stroke-linecap="round" opacity=".7"></path></svg></div></div>
+<header style="position:relative;z-index:10;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding:18px clamp(16px,3vw,40px) 6px">
+<div class="title-ani" style="display:flex;flex-direction:column;gap:2px">
+<h1 style="margin:0;line-height:0"><img src="logo.webp" alt="Khéo sàng khéo sảy" width="720" height="384" style="display:block;height:clamp(44px,5.4vw,64px);width:auto;filter:drop-shadow(0 2px 10px rgba(10,4,30,.55))"></h1>
+<p style="margin:0;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#e9dcff">Đồng dao và hát ru Bắc Bộ</p>
+</div>
+<div style="display:flex;gap:10px;flex-wrap:wrap">
+<button class="ctl hide-sm" type="button" id="mode"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M3 5c3-1 6-1 9 1v14c-3-2-6-2-9-1z"></path><path d="M21 5c-3-1-6-1-9 1v14c3-2 6-2 9-1z"></path></svg><span id="modeTxt">Xem từng trang</span></button>
+<button class="ctl hide-sm" type="button" id="fs" aria-label="Toàn màn hình"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"></path></svg></button>
+<button class="ctl" type="button" id="tocBtn" aria-expanded="false"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"></path></svg><span>Mục lục</span></button>
+</div>
+</header>
+<main class="stage" style="position:relative;z-index:5;flex:1;display:flex;align-items:center;justify-content:center;padding:14px 12px 8px">
+<div class="book double" id="book">
+<div class="bookshadow" id="bshadow"></div>
+<div class="half l" id="hl"><img alt="" draggable="false"></div>
+<div class="half r" id="hr"><img alt="" draggable="false"></div>
+<div class="leaf hide" id="leaf"><div class="face front"><img alt="" draggable="false"><div class="shade"></div></div><div class="face back"><img alt="" draggable="false"><div class="shade"></div></div></div>
+<div class="corner r" id="corner" aria-hidden="true"></div>
+<button class="hit l" type="button" id="hitL" aria-label="Lật về trang trước"></button>
+<button class="hit r" type="button" id="hitR" aria-label="Lật sang trang sau"></button>
+</div>
+</main>
+<footer style="position:relative;z-index:10;display:flex;flex-direction:column;align-items:center;gap:8px;padding:6px 16px 18px">
+<div style="display:flex;align-items:center;gap:14px;width:min(680px,100%)">
+<button class="ctl main" type="button" id="prev" aria-label="Trang trước"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5 L8 12 L15 19"></path></svg></button>
+<div style="flex:1;display:flex;flex-direction:column;gap:6px;min-width:0">
+<label for="range" id="plabel" aria-live="polite" style="font-family:'Baloo 2',system-ui,sans-serif;font-weight:700;font-size:17px;text-align:center">Bìa trước</label>
+<input id="range" class="range" type="range" min="1" max="122" step="1" value="1" style="width:100%;--pct:0%">
+</div>
+<button class="ctl main" type="button" id="next" aria-label="Trang sau"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5 L16 12 L9 19"></path></svg></button>
+</div>
+<p style="margin:0;font-size:12px;color:#d9c9f5;text-align:center">Nhấn vào mép trang, vuốt, dùng phím ← → hoặc kéo thanh trượt để lật sách</p>
+</footer>
+<div id="tocWrap" class="hide">
+<button class="scrim" type="button" id="scrim" aria-label="Đóng mục lục"></button>
+<aside class="drawer" aria-label="Mục lục">
+<div style="position:sticky;top:0;z-index:2;display:flex;align-items:center;justify-content:space-between;padding:20px 20px 12px 24px;background:#fffaf0;border-bottom:1px solid #efe1d0">
+<h2 style="margin:0;font-family:'Baloo 2',system-ui,sans-serif;font-weight:800;font-size:26px;color:#a3246f">Trong sách có gì?</h2>
+<button class="ctl" type="button" id="tocClose" aria-label="Đóng mục lục" style="color:#2a1650;border-color:#e4c7ee;padding:0;width:48px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+</div>
+<div id="tocBody" style="padding:16px 20px 32px;display:flex;flex-direction:column;gap:22px"></div>
+</aside>
+</div>
+</div>
+<script>
+const BOOK={"img": ["pages/001.jpg", "pages/002.jpg", "pages/003.jpg", "pages/004.jpg", "pages/005.jpg", "pages/006.jpg", "pages/007.jpg", "pages/008.jpg", "pages/009.jpg", "pages/010.jpg", "pages/011.jpg", "pages/012.jpg", "pages/013.jpg", "pages/014.jpg", "pages/015.jpg", "pages/016.jpg", "pages/017.jpg", "pages/018.jpg", "pages/019.jpg", "pages/020.jpg", "pages/021.jpg", "pages/022.jpg", "pages/023.jpg", "pages/024.jpg", "pages/025.jpg", "pages/026.jpg", "pages/027.jpg", "pages/028.jpg", "pages/029.jpg", "pages/030.jpg", "pages/031.jpg", "pages/032.jpg", "pages/033.jpg", "pages/034.jpg", "pages/035.jpg", "pages/036.jpg", "pages/037.jpg", "pages/038.jpg", "pages/039.jpg", "pages/040.jpg", "pages/041.jpg", "pages/042.jpg", "pages/043.jpg", "pages/044.jpg", "pages/045.jpg", "pages/046.jpg", "pages/047.jpg", "pages/048.jpg", "pages/049.jpg", "pages/050.jpg", "pages/051.jpg", "pages/052.jpg", "pages/053.jpg", "pages/054.jpg", "pages/055.jpg", "pages/056.jpg", "pages/057.jpg", "pages/058.jpg", "pages/059.jpg", "pages/060.jpg", "pages/061.jpg", "pages/062.jpg", "pages/063.jpg", "pages/064.jpg", "pages/065.jpg", "pages/066.jpg", "pages/067.jpg", "pages/068.jpg", "pages/069.jpg", "pages/070.jpg", "pages/071.jpg", "pages/072.jpg", "pages/073.jpg", "pages/074.jpg", "pages/075.jpg", "pages/076.jpg", "pages/077.jpg", "pages/078.jpg", "pages/079.jpg", "pages/080.jpg", "pages/081.jpg", "pages/082.jpg", "pages/083.jpg", "pages/084.jpg", "pages/085.jpg", "pages/086.jpg", "pages/087.jpg", "pages/088.jpg", "pages/089.jpg", "pages/090.jpg", "pages/091.jpg", "pages/092.jpg", "pages/093.jpg", "pages/094.jpg", "pages/095.jpg", "pages/096.jpg", "pages/097.jpg", "pages/098.jpg", "pages/099.jpg", "pages/100.jpg", "pages/101.jpg", "pages/102.jpg", "pages/103.jpg", "pages/104.jpg", "pages/105.jpg", "pages/106.jpg", "pages/107.jpg", "pages/108.jpg", "pages/109.jpg", "pages/110.jpg", "pages/111.jpg", "pages/112.jpg", "pages/113.jpg", "pages/114.jpg", "pages/115.jpg", "pages/116.jpg", "pages/117.jpg", "pages/118.jpg", "pages/119.jpg", "pages/120.jpg", "pages/121.jpg", "pages/122.jpg"], "alt": ["Bìa sách Khéo sàng khéo sảy – Đồng dao và hát ru Bắc Bộ", "Trang minh hoạ", "Trang minh hoạ", "Trang sách: NHÀ XUẤT BẢN Chịu trách nhiệm xuất bản Cố vấn nội dung Chịu trách nhiệm nội dung Tổng biển tập: Biên tập: Trình bày: Bìa: Sửa bản in: Hình minh họa: Liên kết xuất bản Giấy xác nhận", "Trang sách: LỜI NÓI ĐẦU MƯỜI MỘT GIỜ ĐÊM VÀ CÂU “À ƠI...” BỎ LỬNG Em bé ba tháng tuổi vẫn tỉnh như sáo. Bạn bế con đi quanh phòng, vỗ nhẹ lưng con, rồi bất giác cất tiếng: “À ơi…”. Rồi khựng l", "Trang sách: MỤC LỤC TRONG SÁCH CÓ GÌ? Lời nói đầu 3 PHẦN 1 Chuyện của hát ru và đồng dao 6 Chương 1 Những câu hát đầu đời 8 Chương 2 Vần, nhịp và những con chữ biết nhảy múa 11 Chương 3 Đồng d", "Trang minh hoạ", "Trang sách: PHẦN CHUYỆN CỦA", "Trang sách: 1 HÁT RU VÀ ĐỒNG DAO", "Trang sách: CHƯƠNG 1 NHỮNG CÂU HÁT ĐẦU ĐỜI HÁT RU TIẾNG HÁT BÊN NÔI Hát ru là dân ca để dỗ trẻ ngủ: điệu hát đều, êm, nhẹ. Nó được coi là thể loại dân ca ra đời sớm vào bậc nhất. Thuở đầu, có ", "Trang sách: CHƯƠNG 1 NHỮNG CÂU HÁT ĐẦU ĐỜI HÁT RU MỘT VIỆC TÁM CÁI TÊN Cùng là dỗ em bé ngủ, mà đi mỗi nơi người ta gọi một kiểu. Miền Bắc, miền Trung ru em Nam Bộ hát ầu ơ - hát đưa em Quảng ", "Trang sách: CHƯƠNG 1 NHỮNG CÂU HÁT ĐẦU ĐỜI ĐỒNG DAO BÀI HÁT CỦA TRẺ CON “Đồng” là trẻ con. “Dao” là bài hát. Ghép lại: bài hát của trẻ con. Có lẽ đây là định nghĩa ngắn nhất bạn gặp trong cuốn", "Trang sách: CHƯƠNG 2 VẦN, NHỊP VÀ NHỮNG CON CHỮ BIẾT NHẢY MÚA ĐỒNG DAO CÂU NGẮN VẦN MÓC VÀO NHAU Có những bài đồng dao trẻ ba tuổi nghe hai lần đã đọc theo được. Bí quyết nằm ở cách chúng được", "Trang sách: CHƯƠNG 2 VẦN, NHỊP VÀ NHỮNG CON CHỮ BIẾT NHẢY MÚA NHỊP ĐỂ VỖ TAY VÒNG ĐỂ ĐỌC MÃI Nhịp chẵn Câu bốn chữ ngắt hai tiếng một: “Kéo cưa” rồi “lừa xẻ”, “Nu na” rồi “nu nống” (?). Nhịp đ", "Trang sách: CHƯƠNG 2 VẦN, NHỊP VÀ NHỮNG CON CHỮ BIẾT NHẢY MÚA LỤC BÁT VÀ TIẾNG À ƠI Lục bát là xương sống Một cặp lục bát, câu sáu chữ rồi câu tám chữ, là đơn vị nhỏ nhất của lời ru. Hầu như c", "Trang sách: CHƯƠNG 3 ĐỒNG DAO VÀ HÁT RU: HAI NGƯỜI ANH EM HAI ANH EM KHÁC TÍNH Đồng dao và hát ru như hai anh em trong một nhà, mà tính nết rất khác. Một người ồn ào, nhanh nhảu, chỉ thích chạ", "Trang sách: CHƯƠNG 3 ĐỒNG DAO VÀ HÁT RU: HAI NGƯỜI ANH EM LÚC NÀO RU LÚC NÀO CHƠI? Con cần dịu lại, cần ngủ: hát ru Giọng chậm, nhỏ dần, lặp lại vài câu quen. Trước khi đặt con ngủ, xem “Ru co", "Trang sách: CHƯƠNG 4 ĐIỀU KỲ DIỆU TRONG NHỮNG CÂU HÁT GIẢN DỊ GIỌNG BẠN KHÁC GIỌNG MÁY Các nghiên cứu dưới đây gợi ý rằng có những điều chiếc loa khó làm thay giọng hát của người thân. • Cha m", "Trang sách: CHƯƠNG 4 ĐIỀU KỲ DIỆU TRONG NHỮNG CÂU HÁT GIẢN DỊ ĐỒNG DAO GIÚP ĐƯỢC GÌ CHO CON? Con chữ vào tai trước, vào mắt sau Ở Anh, 64 trẻ được theo dõi từ hơn 3 tuổi đến hơn 6 tuổi. Những ", "Trang sách: PHẦN TUYỂN TẬP", "Trang sách: 2 HÁT RU VÀ ĐỒNG DAO", "Trang sách: CHƯƠNG 5 DÙNG TUYỂN TẬP THẾ NÀO CHỌN BÀI THEO TUỔI, THEO LÚC 0 đến 1 tuổi nghe là chính 1 đến 3 tuổi bắt chước, vỗ tay 3 đến 6 tuổi chơi cùng bạn 6 đến 10 tuổi tự chơi, tự đọc Hát ", "Trang sách: Rồng rắn lên mây Thấy cây núc nác ĐỒNG DAO · RỒNG RẮN LÊN MÂY", "Trang sách: Dung dăng dung dẻ, Dắt trẻ đi chơi. ĐỒNG DAO · DUNG DĂNG DUNG DẺ", "Trang sách: CHƯƠNG 6 ĐỒNG DAO 24 BÀI ĐỂ CHƠI Đồng dao là thứ các con đọc bằng cả người: vừa đọc vừa vỗ tay, kéo cưa, ngồi thụp, chạy vòng quanh sân. Mỗi bài chiếm hai trang: bên trái là lời, b", "Trang sách: CHƯƠNG 6 · BẢNG TRA TÌM BÀI ĐỒNG DAO Đồng dao trò chơi Tập tầm vông Kéo cưa lừa xẻ Chi chi chành chành Nu na nu nống Dung dăng dung dẻ Lộn cầu vồng Rồng rắn lên mây Mèo đuổi chuột ", "Trang minh hoạ", "Trang sách: TẬP TẦM VÔNG Tập tầm vông, tay không tay có, Tập tầm vó, tay có tay không. Tay nào không? Tay nào có? Tay nào có? Tay nào không?... 26 KHÉO SÀNG KHÉO SẢY", "Trang sách: 01 · TẬP TẦM VÔNG CÁCH CHƠI Trò ảo thuật đầu đời: hai nắm tay, một món đồ, và một người đoán. 1. Hai người ngồi đối diện. Người giấu nắm một vật nhỏ trong lòng bàn tay, vừa đọc vừa", "Trang sách: KÉO CƯA LỪA XẺ Kéo cưa lừa xẻ, Ông thợ nào khoẻ, Về ăn cơm vua. Ông thợ nào thua, Về bú tí mẹ. Kéo cưa lừa xẻ, Làm ít ăn nhiều, Nằm đâu ngủ đấy. Nó lấy mất cưa, Lấy gì mà kéo. 28 K", "Trang sách: 02 · KÉO CƯA LỪA XẺ CÁCH CHƠI Xưởng cưa không cần gỗ, chỉ cần hai người và bốn bàn tay. 1. Hai người ngồi đối diện, nắm chặt tay nhau, vừa đọc vừa kéo về, đẩy ra như đang cưa gỗ. M", "Trang sách: CHI CHI CHÀNH CHÀNH Chi chi chành chành Cái đanh thổi lửa Con ngựa chết trương Ba vương ngũ đế Bắt dế đi tìm Ù à ù ập 30 KHÉO SÀNG KHÉO SẢY", "Trang sách: 03 · CHI CHI CHÀNH CHÀNH CÁCH CHƠI 1. Một bé xòe bàn tay, các bé khác đặt ngón trỏ vào lòng bàn tay ấy. 2. Người xòe tay đọc bài, kéo dài giọng ở tiếng gần cuối rồi bất ngờ nắm tay", "Trang sách: NU NA NU NỐNG Nu na nu nống Cái cống nằm trong Con ong nằm ngoài Củ khoai chấm mật Phật ngồi Phật khóc Con cóc nhảy ra Con gà tú hụ Nhà mụ thổi xôi Nhà tôi nấu chè Tay xoè chân rụt", "Trang sách: 04 · NU NA NU NỐNG CÁCH CHƠI 1. Ba, bốn bé ngồi sát nhau, duỗi thẳng hai chân. 2. Một bé vừa đọc vừa đập nhẹ lần lượt vào từng chân, mỗi tiếng một chân. Tiếng cuối rơi vào chân nào", "Trang sách: DUNG DĂNG DUNG DẺ Dung dăng dung dẻ, Dắt trẻ đi chơi. Đến cổng nhà trời, Lạy cậu lạy mợ. Cho cháu về quê, Cho dê đi học. Cho cóc ở nhà, Cho gà bới bếp. Xì xì xì xụp, Ngồi thụp xuốn", "Trang sách: 05 · DUNG DĂNG DUNG DẺ CÁCH CHƠI 1. Các con nắm tay nhau thành hàng, vừa đi vừa đung đưa tay theo nhịp đọc. 2. Đến câu cuối, cả nhóm ngồi thụp xuống, rồi đứng dậy đọc lại từ đầu. 3", "Trang sách: LỘN CẦU VỒNG Lộn cầu vồng, Nước sông đang chảy. Thằng bé lên bảy, Con bé lên ba. Đôi ta cùng lộn. 36 KHÉO SÀNG KHÉO SẢY", "Trang sách: 06 · LỘN CẦU VỒNG CÁCH CHƠI Hai bạn nắm tay, lộn một vòng, và thấy mình đứng quay lưng vào nhau. 1. Hai bé đứng đối mặt, nắm tay nhau, lắc tay theo nhịp đọc. 2. Đến câu cuối, cả ha", "Trang sách: RỒNG RẮN LÊN MÂY Rồng rắn lên mây Thấy cây núc nác Hỏi thăm thầy thuốc Có nhà hay không? 38 KHÉO SÀNG KHÉO SẢY", "Trang sách: 07 · RỒNG RẮN LÊN MÂY CÁCH CHƠI 1. Năm, sáu bé túm áo nhau làm rồng rắn, vừa đi vòng vèo vừa đọc. Một bé làm thầy thuốc đứng đối diện. 2. Thầy trả lời “không”: rồng rắn đi tiếp. Th", "Trang sách: MÈO ĐUỔI CHUỘT Mời bạn lại đây, Tay nắm chặt tay. Đứng thành vòng rộng, Chuột luồn lỗ nhỏ. Chạy thẳng chạy mau, Mèo đuổi theo sau. Chuột cố chạy mau, Trốn đâu cho thoát. Thế rồi ch", "Trang sách: 08 · MÈO ĐUỔI CHUỘT CÁCH CHƠI 1. Cả nhóm nắm tay đứng thành vòng tròn, chọn hai bé làm mèo và chuột. 2. Chuột chạy, luồn qua khe giữa các bạn đứng vòng; mèo đuổi theo. Chuột bị bắt", "Trang sách: BỊT MẮT BẮT DÊ Một bầy trẻ nhỏ Bịt mắt bắt dê Dê vấp bờ hè Ngã kềnh bốn vó Mọi người cười rộ Cố đuổi vòng quanh Dê chạy thật nhanh Túm ngay một chú 42 KHÉO SÀNG KHÉO SẢY", "Trang sách: 09 · BỊT MẮT BẮT DÊ CÁCH CHƠI Một chiếc khăn mềm, một khoảng sân, và cả bọn hóa thành dê. 1. Một bé bịt mắt đi bắt, các bé khác làm “dê” chạy quanh trong khoảng sân có giới hạn. 2.", "Trang sách: XỈA CÁ MÈ Xỉa cá mè Đè cá chép Chân nào đẹp Đi giao men Chân nào xấu Ở nhà làm chó làm mèo. Ai mua men, ra mua Gâu! Gâu! Gâu! Meo! Meo! Meo! 44 Xỉa cá mè Đè cá chép Chân nào đẹp Đi", "Trang sách: 10 · XỈA CÁ MÈ CÁCH CHƠI Bài này phân vai bằng may rủi: người đi bán men, người làm chó, người làm mèo. 1. Ba, bốn bé ngồi duỗi chân, một bé vừa đọc vừa chỉ lần lượt vào từng chân.", "Trang sách: THẢ ĐỈA BA BA Thả đỉa ba ba Chớ bắt đàn bà Phải tội đàn ông Cơm trắng như bông Gạo tiền như nước Đổ mắm đổ muối Đổ chuối hạt tiêu Đổ niêu nước chè Đổ phải nhà nào Nhà nấy phải chịu", "Trang sách: 11 · THẢ ĐỈA BA BA CÁCH CHƠI Sân nhà hóa thành ao, và trong ao có một con đỉa rất thích túm người. 1. Bốn, năm bé đứng chụm giữa sân. Một bé vừa đọc vừa vỗ nhẹ lên đầu từng người; ", "Trang sách: BẮC KIM THANG Bắc kim thang: cà, lang, bí rợ... Cột qua kèo là kèo qua cột. Chú bán dầu qua cầu mà té, Chú bán ếch ở lại làm chi. Con le le đánh trống thổi kèn, Con bìm bịp thổi tò", "Trang sách: 12 · BẮC KIM THANG CHUYỆN QUANH BÀI Lời bài có những tiếng rất Nam Bộ như “bí rợ”, “té”. Vậy mà trong bản ghi của Viện Âm nhạc, bài lại được ghi là của đồng bằng Bắc Bộ. • Một bài ", "Trang sách: CHƠI CHUYỀN Cái mốt, cái mai Con trai, con hến Con nhện chăng tơ Quả mơ, quả mận Cái cận, lên bàn đôi Đôi chúng tôi Đôi chúng nó Đôi con chó Đôi con mèo Hai chèo ba Ba đi xa Ba về ", "Trang sách: 13 · CHƠI CHUYỀN CHUYỆN QUANH BÀI Tay tung, tay nhặt, miệng đếm: từ chuyền một đến chuyền mười. 1. Theo cách chơi phổ biến, người chơi tung một quả lên và nhặt dần số que, tăng từ ", "Trang sách: CON VỎI CON VOI Con vỏi, con voi, Cái vòi đi trước. Hai chân trước đi trước, Hai chân sau đi sau. Còn cái đuôi đi sau rốt. Tôi xin kể nốt, Cái chuyện con voi. 52 KHÉO SÀNG KHÉO SẢY", "Trang sách: 14 · CON VỎI CON VOI CÁCH ĐỌC CÙNG CON Một bài tả voi rất có trật tự: cái vòi, hai chân trước, hai chân sau, rồi mới đến cái đuôi. • Đây là bài đọc vòng: câu cuối nối vào câu đầu, ", "Trang sách: CON CÒ CAO CẲNG Con cò cao cẳng Bước thẳng xuống đồng Thấy cá chạy rông Cò cao cẳng bước Cò mổ cá ăn Con cá mất tăm Rách, rách, rách, rách. 54 KHÉO SÀNG KHÉO SẢY", "Trang sách: 15 · CON CÒ CAO CẲNG CÁCH ĐỌC CÙNG CON Câu cuối “Rách, rách, rách, rách.” nhại tiếng nước. Cứ để con đọc thật to. • Cùng con nhón chân, bước dài như cò. • Đến câu “Cò mổ cá ăn” thì", "Trang sách: BÀ CÒNG ĐI CHỢ TRỜI MƯA Bà còng đi chợ trời mưa, Cái tôm cái tép đi đưa bà còng. Đưa bà đến quãng đường đông, Đưa bà vào tận ngõ trong nhà bà. Tiền bà trong túi rơi ra, Tép, tôm nh", "Trang sách: 16 · BÀ CÒNG ĐI CHỢ TRỜI MƯA CÁCH ĐỌC CÙNG CON Sáu câu lục bát kể chuyện tôm, tép đưa bà còng về tận ngõ, rồi nhặt tiền rơi trả bà. • Đọc xong, hỏi con: “Tôm, tép đã giúp bà những ", "Trang sách: CON CÔNG HAY MÚA Tập tầm vông, Con công hay múa, Nó múa làm sao? Nó rụt cổ vào, Nó xoè cánh ra. Nó đậu cành đa, Nó kêu ríu rít. 58 Nó đậu cành mít, Nó kêu vịt chè. Nó đậu cành tre,", "Trang sách: 17 · CON CÔNG HAY MÚA CÁCH ĐỌC CÙNG CON Con công đổi chỗ đậu liên tục: cành đa, cành mít, cành tre, rồi xuống ruộng. Chỗ nào cũng kèm một tiếng kêu vui tai. • Bài đọc vòng: đến “Co", "Trang sách: BỒ CÁC LÀ BÁC CHIM RI Bồ các là bác chim ri Chim ri là dì sáo sậu Sáo sậu là cậu sáo đen Sáo đen là em tu hú Tu hú là chú bồ các Bồ các là bác chim ri... 60 KHÉO SÀNG KHÉO SẢY", "Trang sách: 18 · BỒ CÁC LÀ BÁC CHIM RI CÁCH ĐỌC CÙNG CON Một bài đọc vòng qua cả họ nhà chim, nơi ai cũng là bác, dì, cậu, chú của ai đó. • Bé vừa nhớ tên các loài chim, vừa tập tiếng xưng hô ", "Trang sách: ÔNG GIẲNG ÔNG GIĂNG Ông giẳng ông giăng, Xuống chơi với tôi. Có bầu có bạn, Có ván cơm xôi. Có nồi cơm nếp, Có nệp bánh chưng. Có lưng hũ rượu, Có khướu đánh đu. Thằng cu vỗ chài, ", "Trang sách: 19 · ÔNG GIẲNG ÔNG GIĂNG CÁCH ĐỌC CÙNG CON Bé gọi ông trăng xuống chơi, rồi kể hết những gì nhà mình có: nồi cơm nếp, bánh chưng, con trâu, cả thằng cu, cái đỏ. • Đêm trăng sáng, b", "Trang sách: NÓI NGƯỢC Bao giờ cho đến tháng ba Ếch cắn cổ rắn tha ra ngoài đồng Hùm nằm cho lợn liếm lông, Một chục quả hồng nuốt lão tám mươi. Nắm xôi nuốt trẻ lên mười, Con gà, nậm rượu nuốt", "Trang sách: 20 · NÓI NGƯỢC (BAO GIỜ CHO ĐẾN THÁNG BA) CÁCH ĐỌC CÙNG CON Ếch cắn cổ rắn, hùm nằm cho lợn liếm lông. Trẻ bật cười vì nhận ra cái “sai”, và nhờ vậy càng nhớ cái đúng. • Đọc xong m", "Trang sách: TAY ĐẸP Một tay đẹp Hai tay đẹp Ba tay đẹp Tay dệt vải Tay vãi rau Tay buông câu Tay chặt củi Tay đắp núi 66 Tay đào sông Tay cạo lông Tay mổ lợn Tay bắt vượn Tay bắt voi Tay bẻ ro", "Trang sách: 21 · TAY ĐẸP CÁCH CHƠI Đếm “một, hai, ba” rồi kể đôi tay làm được những gì: dệt vải, gieo rau, câu cá, chặt củi. Mỗi câu chỉ ba tiếng, bé nhỏ cũng đọc theo được. 1. Bạn và con cùng", "Trang sách: GÁNH GÁNH GỒNG GỒNG Gánh gánh gồng gồng Gánh sông gánh núi Gánh củi gánh cành Ta chạy cho nhanh Về xây nhà bếp Nấu nồi cơm nếp Chia ra năm phần Một phần cho mẹ 68 Một phần cho cha ", "Trang sách: 22 · GÁNH GÁNH GỒNG GỒNG CÁCH CHƠI Bài toán chia phần đầu tiên: năm phần cho mẹ, cha, bà, chị, anh. 1. Xòe một bàn tay. Đến mỗi câu “Một phần cho…” thì gập một ngón, để con thấy nă", "Trang sách: RỀNH RỀNH RÀNG RÀNG Rềnh rềnh ràng ràng Ba gang chiếu trải Xích lại cho gần Một người hai chân Hai người bốn chân Ba người sáu chân Bốn người tám chân Chân gầy chân béo 70 Dệt vải ", "Trang sách: 23 · RỀNH RỀNH RÀNG RÀNG CÁCH CHƠI Phép nhân 2 trên một chiếc chiếu: một người hai chân, hai người bốn chân. 1. Trải chiếu, các con ngồi sát nhau, đọc đến đâu đếm chân đến đó. 2. N", "Trang sách: ĂN MỘT BÁT CƠM Ăn một bát cơm, Nhớ người cày ruộng. Ăn đĩa rau muống, Nhớ người đào ao. Ăn một quả đào, Nhớ người vun gốc. Ăn một con ốc, 72 Nhớ người đi mò. Sang đò, Nhớ người chè", "Trang sách: 24 · ĂN MỘT BÁT CƠM CÁCH ĐỌC CÙNG CON Mỗi cặp câu nối một thứ con được hưởng với người làm ra nó: bát cơm với người cày ruộng, bóng mát với người trồng cây. • Hợp nhất là đọc trong", "Trang sách: Ông giẳng ông giăng, Xuống chơi với tôi. ĐỒNG DAO · ÔNG GIẲNG ÔNG GIĂNG", "Trang sách: Gió đưa cây cải về trời, rau răm ở lại chịu lời đắng cay. HÁT RU · GIÓ ĐƯA CÂY CẢI VỀ TRỜI", "Trang sách: CHƯƠNG 7 HÁT RU 19 BÀI ĐỂ NGỦ Chưa biết bắt đầu từ đâu? “Con cò mà đi ăn đêm” (trang 78) và “Ví dầu cầu ván đóng đinh” (trang 104) ngắn, êm, rất hợp để bắt đầu. Miền Bắc à ơi Miền ", "Trang sách: CHƯƠNG 7 · BẢNG TRA TÌM BÀI HÁT RU Miền Bắc Con cò mà đi ăn đêm Cái ngủ mày ngủ cho lâu Gió mùa thu mẹ ru con ngủ Cái bống là cái bống bang Ru con con ngủ cho lành Con tôi buồn ngủ", "Trang sách: CON CÒ MÀ ĐI ĂN ĐÊM À ơi… Con cò mày đi ăn đêm, đậu phải cành mềm lộn cổ xuống ao. À ơi… Ông ơi, ông vớt tôi nao, tôi có lòng nào ông hãy xáo măng. À ơi... Có xáo thì xáo nước tron", "Trang sách: CON CÒ MÀ ĐI ĂN ĐÊM Con cò đậu phải cành mềm, ngã lộn xuống ao, chỉ xin một điều: có nấu thì nấu nước trong, đừng để “cò con” đau lòng. Báo Khánh Hòa xem đây là làn điệu ru tiêu bi", "Trang sách: CÁI NGỦ MÀY NGỦ CHO LÂU Cái ngủ mày ngủ cho lâu, Mẹ mày đi cấy đồng sâu chưa về. Bắt được con giếc con trê, Cầm cổ lôi về bắc nước làm lông. Miếng nạc thời để phần chồng, Miếng xươ", "Trang sách: CÁI NGỦ MÀY NGỦ CHO LÂU Người ru dỗ “cái ngủ” ngủ cho lâu để mẹ đi cấy, bắt cá mang về. Đến bữa, miếng nạc phần chồng, miếng lòng phần con, còn mẹ nhận miếng xương. Cách hát • Hai ", "Trang sách: GIÓ MÙA THU MẸ RU CON NGỦ Gió mùa thu mẹ ru con ngủ Năm canh chầy thức đủ vừa năm… 82 KHÉO SÀNG KHÉO SẢY", "Trang sách: GIÓ MÙA THU MẸ RU CON NGỦ Chỉ hai câu bảy chữ mà gói cả một đêm thu: mẹ ru con, thức trọn năm canh. Cách hát • Bài ngắn, hợp những tối bạn mệt: cứ ru mãi hai câu ấy đến khi con thi", "Trang sách: CÁI BỐNG LÀ CÁI BỐNG BANG Cái bống là cái bống bang, Khéo sảy, khéo sàng cho mẹ nấu cơm. Mẹ bống đi chợ đường trơn, Bống ra gánh đỡ chạy cơn mưa ròng. 84 KHÉO SÀNG KHÉO SẢY", "Trang sách: CÁI BỐNG LÀ CÁI BỐNG BANG “Bống” là tiếng gọi yêu đứa con gái nhỏ. Bé khéo sảy, khéo sàng gạo cho mẹ nấu cơm, thấy mẹ đi chợ gặp mưa thì chạy ra đỡ gánh. Cách hát • Bài vừa để ru v", "Trang sách: RU CON CON NGỦ CHO LÀNH Ru con con ngủ cho lành Để mẹ gánh nước rửa bành cho voi Muốn coi lên núi mà coi Coi Bà Triệu tướng cưỡi voi đánh cồng. 86 KHÉO SÀNG KHÉO SẢY", "Trang sách: RU CON CON NGỦ CHO LÀNH Lời ru kể chuyện Bà Triệu cưỡi voi ra trận. Người mẹ thì “gánh nước rửa bành cho voi”: việc nhỏ thôi, mà cũng là góp một tay. Cách hát • Đến tuổi hay hỏi, c", "Trang sách: CON TÔI BUỒN NGỦ BUỒN NGHÊ Con tôi buồn ngủ buồn nghê, Buồn ăn cơm nếp, cháo kê thịt gà. Nhà còn có một quả cà, Làm sao đủ miếng cơm và cho con. Con tôi khóc héo, khóc hon, Khóc đò", "Trang sách: CON TÔI BUỒN NGỦ BUỒN NGHÊ Người mẹ nghèo dỗ con bằng cả một chuỗi món nhà không có: quả thị, chuối ngự, cốm làng Ngang, dưa gang làng Quài. Cách hát • Bài kể nối dài, hợp những tố", "Trang sách: BỒNG BỒNG CON NÍN CON ƠI Bồng bồng con nín con ơi, Dưới sông cá lội, ở trên trời chim bay. Ước gì mẹ có mười tay, Tay kia bắt cá, tay này bắt chim. Một tay chuốt chỉ luồn kim, Một ", "Trang sách: BỒNG BỒNG CON NÍN CON ƠI Người mẹ kể hết việc phải làm, ước có mười tay mà vẫn “thiếu tay”. Cách hát • Nhiều câu dài hơn câu lục bát thường. Bạn hát chậm và lấy hơi ở chỗ dấu phẩy.", "Trang sách: RU EM EM THÉC CHO MUỒI Ru em, em théc cho muồi, Để mẹ đi chợ mua vôi têm trầu. Mua vôi chợ Quán, chợ Cầu, Mua cau Nam Phổ, mua trầu chợ Dinh. Chợ Dinh bán áo con trai, Triều Sơn bá", "Trang sách: RU EM EM THÉC CHO MUỒI Mẹ đi chợ mua vôi, mua cau, mua trầu, mỗi chợ một món. Bài ru thành tấm bản đồ chợ quanh Huế. Cách hát • Hai chữ “Ru em” gợi rằng người ru có thể là anh chị,", "Trang sách: BỒNG EM MÀ BỎ VÔ NÔI Bồng em mà bỏ vô nôi Cho mẹ đi chợ mua vôi ăn trầu Mua vôi chợ Quán, chợ Cầu Mua cau Vĩnh Điện, mua trầu Hội An 94 KHÉO SÀNG KHÉO SẢY", "Trang sách: BỒNG EM MÀ BỎ VÔ NÔI Bài giữ khung của bài ru Huế “Ru em, em théc cho muồi” (bài 32, trang 92), nhưng chợ và làng đã đổi sang xứ Quảng. Lời ru đi tới đâu, người nơi ấy thay vào tên", "Trang sách: TRÔNG RA NGOÀI BIỂN LU BÙ Trông ra ngoài biển lu bù Thấy anh câu đục câu đù em thương 96 KHÉO SÀNG KHÉO SẢY", "Trang sách: TRÔNG RA NGOÀI BIỂN LU BÙ Lời ru của một làng biển: có tên cá, có nghề biển, có nỗi thương nhớ giữa vợ chồng. Cách hát • Ru Cảnh Dương mở bằng chuỗi tiếng đưa hơi riêng: hò hẻ hò h", "Trang sách: CON ƠI CON NGỦ CHO LÀNH Con ơi con ngủ cho lành Ông Mai Hắc Đế xây thành Vạn An 98 KHÉO SÀNG KHÉO SẢY", "Trang sách: CON ƠI CON NGỦ CHO LÀNH Lời ru nhắc Mai Thúc Loan, tức Mai Hắc Đế, người lãnh đạo khởi nghĩa Hoan Châu chống nhà Đường và xây kinh đô Vạn An. Chuyện quanh bài • Theo chú thích của ", "Trang sách: CON ƠI MẸ DẶN CÂU NÀY Con ơi, mẹ dặn câu này Chăm lo đèn sách cho tày áo cơm Làm người đói sạch rách thơm Công danh là nợ nước non phải đền 100 KHÉO SÀNG KHÉO SẢY", "Trang sách: CON ƠI MẸ DẶN CÂU NÀY Mẹ dặn con chăm học, giữ nếp “đói cho sạch, rách cho thơm”. Cách hát • Khi con đã hiểu lời, hát xong bạn hỏi con “đói sạch rách thơm” nghĩa là gì. Giải nghĩa ", "Trang sách: AI VỀ NHẮN VỚI NẬU NGUỒN Ai về nhắn với nậu nguồn Măng le đưa xuống cá chuồn gởi lên 102 KHÉO SÀNG KHÉO SẢY", "Trang sách: AI VỀ NHẮN VỚI NẬU NGUỒN Trên nguồn gửi măng le xuống, dưới biển gửi cá chuồn lên: một câu ca về chuyện miền núi, miền biển đổi sản vật cho nhau. Cách hát • Lời ru xưa vẫn hay mượn", "Trang sách: VÍ DẦU CẦU VÁN ĐÓNG ĐINH Ầu ơ... ơi... ví dầu… Cầu ván đóng đinh Cầu tre lắt lẻo, gập ghềnh khó đi… Khó đi mẹ dắt con đi… Con đi trường học, mẹ đi trường đời… 104 KHÉO SÀNG KHÉO SẢ", "Trang sách: VÍ DẦU CẦU VÁN ĐÓNG ĐINH Chiếc cầu tre chênh vênh thành hình ảnh đường đời: con đến trường, còn mẹ bươn chải giữa “trường đời”. Cách hát • Bài ghi sẵn tiếng đưa hơi ầu ơ… ơi… ví dầ", "Trang sách: GIÓ ĐƯA CÂY CẢI VỀ TRỜI Gió đưa cây cải về trời, rau răm ở lại chịu lời đắng cay. 106 KHÉO SÀNG KHÉO SẢY", "Trang sách: GIÓ ĐƯA CÂY CẢI VỀ TRỜI Cây cải theo gió bay “về trời”, rau răm ở lại chịu đắng cay: chuyện người đi, kẻ ở. NGUỒN: Huỳnh Tịnh Của, Câu hát góp, bản in lần thứ hai, 1901, câu số 239", "Trang sách: MÁ ƠI ĐỪNG GẢ CON XA Má ơi đừng gả con xa, Chim kêu, vượn hú, biết nhà má đâu. 108 KHÉO SÀNG KHÉO SẢY", "Trang sách: MÁ ƠI ĐỪNG GẢ CON XA Người con gái xin mẹ đừng gả mình đi xa. Khi người mẹ trẻ hát câu này ru con, lời ru cũng là tiếng lòng nhớ mẹ của chính mình. Giải nghĩa • má: mẹ; người Nam B", "Trang sách: VÍ DẦU CÁ LÓC NẤU CANH Ví dầu cá lóc nấu canh Bỏ tiêu cho ngọt, bỏ hành cho thơm 110 KHÉO SÀNG KHÉO SẢY", "Trang sách: VÍ DẦU CÁ LÓC NẤU CANH Hai câu ru tả nồi canh cá lóc quen thuộc của miền sông nước, đơn giản và dễ thuộc. Cách hát • Theo RFA, khi Giáo sư Trần Văn Khê hát lại câu ru của làng mình", "Trang sách: VÍ DẦU CÁ BÓNG XÍCH ĐU Ví dầu cá bóng xích đu Tôm càng hát bội, cá thu cầm chầu 112 KHÉO SÀNG KHÉO SẢY", "Trang sách: VÍ DẦU CÁ BÓNG XÍCH ĐU Cá bóng chơi xích đu, tôm càng diễn hát bội, cá thu ngồi cầm chầu. Một câu ru vui. Cách hát • Khi con đã hiểu lời, bạn hỏi con mỗi con vật đang làm gì. Giải ", "Trang sách: GIÓ ĐƯA BỤI CHUỐI SAU HÈ Gió đưa bụi chúi sau hè, anh ham vợ bé bỏ bè con thơ. 114 KHÉO SÀNG KHÉO SẢY", "Trang sách: GIÓ ĐƯA BỤI CHUỐI SAU HÈ Đây là lời người vợ trách chồng mê vợ bé, bỏ mặc vợ con. Câu hát không nói với đứa trẻ; đó là tiếng lòng người mẹ, điều thường gặp trong lời ru ở cả ba miề", "Trang sách: CHƯƠNG 7 · TRƯỚC KHI ĐẶT CON NGỦ RU CON AN TOÀN Bạn có thể bế, đưa võng, vỗ lưng trong lúc ru. Còn khi đặt con ngủ, Học viện Nhi khoa Hoa Kỳ khuyến nghị: • Đặt con nằm ngửa trên mộ", "Trang sách: NGUỒN THAM KHẢO CHÍNH Danh mục đầy đủ, kèm nguồn của từng lời bài và các dị bản, nằm trong bản sách chữ. Dưới đây là những nguồn được dùng nhiều nhất. • Lương Thị Hằng My (2017), l", "Trang minh hoạ", "Trang minh hoạ", "Trang sách: MỘT TIẾNG À ƠI HAI CÂU LỤC BÁT MỘT CÁI VỖ LƯNG THẬT CHẬM Cuốn sách nhỏ này gom lại những lời ru, những câu đồng dao ông bà ta đã trao nhau qua bao thế hệ, để bạn dùng được ngay tối"], "toc": [{"t": "Lời nói đầu", "n": "3", "i": 4}, {"t": "Phần 1 · Chuyện của hát ru và đồng dao", "n": "6", "i": 7}, {"t": "Chương 1 · Những câu hát đầu đời", "n": "8", "i": 9}, {"t": "Chương 2 · Vần, nhịp và những con chữ biết nhảy múa", "n": "11", "i": 12}, {"t": "Chương 3 · Đồng dao và hát ru: hai người anh em", "n": "14", "i": 15}, {"t": "Chương 4 · Điều kỳ diệu trong những câu hát giản dị", "n": "16", "i": 17}, {"t": "Phần 2 · Tuyển tập hát ru và đồng dao", "n": "18", "i": 19}, {"t": "Chương 5 · Dùng tuyển tập thế nào", "n": "20", "i": 21}, {"t": "Chương 6 · Đồng dao: 24 bài để chơi", "n": "23", "i": 24}, {"t": "Chương 7 · Hát ru: 19 bài để ngủ", "n": "76", "i": 77}, {"t": "Nguồn tham khảo chính", "n": "117", "i": 118}], "dd": [{"t": "Tập tầm vông", "n": "26", "i": 27}, {"t": "Kéo cưa lừa xẻ", "n": "28", "i": 29}, {"t": "Chi chi chành chành", "n": "30", "i": 31}, {"t": "Nu na nu nống", "n": "32", "i": 33}, {"t": "Dung dăng dung dẻ", "n": "34", "i": 35}, {"t": "Lộn cầu vồng", "n": "36", "i": 37}, {"t": "Rồng rắn lên mây", "n": "38", "i": 39}, {"t": "Mèo đuổi chuột", "n": "40", "i": 41}, {"t": "Bịt mắt bắt dê", "n": "42", "i": 43}, {"t": "Xỉa cá mè", "n": "44", "i": 45}, {"t": "Thả đỉa ba ba", "n": "46", "i": 47}, {"t": "Bắc kim thang", "n": "48", "i": 49}, {"t": "Chơi chuyền", "n": "50", "i": 51}, {"t": "Con vỏi con voi", "n": "52", "i": 53}, {"t": "Con cò cao cẳng", "n": "54", "i": 55}, {"t": "Bà còng đi chợ trời mưa", "n": "56", "i": 57}, {"t": "Con công hay múa", "n": "58", "i": 59}, {"t": "Bồ các là bác chim ri", "n": "60", "i": 61}, {"t": "Ông giẳng ông giăng", "n": "62", "i": 63}, {"t": "Nói ngược", "n": "64", "i": 65}, {"t": "Tay đẹp", "n": "66", "i": 67}, {"t": "Gánh gánh gồng gồng", "n": "68", "i": 69}, {"t": "Rềnh rềnh ràng ràng", "n": "70", "i": 71}, {"t": "Ăn một bát cơm", "n": "72", "i": 73}], "hr": [{"t": "Con cò mà đi ăn đêm", "n": "78", "i": 79}, {"t": "Cái ngủ mày ngủ cho lâu", "n": "80", "i": 81}, {"t": "Gió mùa thu mẹ ru con ngủ", "n": "82", "i": 83}, {"t": "Cái bống là cái bống bang", "n": "84", "i": 85}, {"t": "Ru con con ngủ cho lành", "n": "86", "i": 87}, {"t": "Con tôi buồn ngủ buồn nghê", "n": "88", "i": 89}, {"t": "Bồng bồng con nín con ơi", "n": "90", "i": 91}, {"t": "Ru em em théc cho muồi", "n": "92", "i": 93}, {"t": "Bồng em mà bỏ vô nôi", "n": "94", "i": 95}, {"t": "Trông ra ngoài biển lu bù", "n": "96", "i": 97}, {"t": "Con ơi con ngủ cho lành", "n": "98", "i": 99}, {"t": "Con ơi mẹ dặn câu này", "n": "100", "i": 101}, {"t": "Ai về nhắn với nậu nguồn", "n": "102", "i": 103}, {"t": "Ví dầu cầu ván đóng đinh", "n": "104", "i": 105}, {"t": "Gió đưa cây cải về trời", "n": "106", "i": 107}, {"t": "Má ơi đừng gả con xa", "n": "108", "i": 109}, {"t": "Ví dầu cá lóc nấu canh", "n": "110", "i": 111}, {"t": "Ví dầu cá bóng xích đu", "n": "112", "i": 113}, {"t": "Gió đưa bụi chuối sau hè", "n": "114", "i": 115}], "quick": [{"t": "Cần một bài ru tối nay", "i": 79}, {"t": "Con muốn chơi, vận động", "i": 25}, {"t": "Chọn bài theo tuổi của con", "i": 21}, {"t": "Vì sao nên hát cho con", "i": 7}]};
+const FXSVG={"note": "<svg viewBox=\"0 0 40 56\" aria-hidden=\"true\"><path d=\"M14 44 L14 6 L36 2 L36 12 L18 15 L18 44\" fill=\"currentColor\"></path><ellipse cx=\"10\" cy=\"45\" rx=\"9\" ry=\"7\" fill=\"currentColor\" transform=\"rotate(-20 10 45)\"></ellipse></svg>", "spark": "<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M12 0 C13 8 16 11 24 12 C16 13 13 16 12 24 C11 16 8 13 0 12 C8 11 11 8 12 0Z\" fill=\"currentColor\"></path></svg>", "star": "<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M12 2 L14.6 8.8 L22 9.3 L16.3 14 L18.2 21.3 L12 17.3 L5.8 21.3 L7.7 14 L2 9.3 L9.4 8.8 Z\" fill=\"currentColor\"></path></svg>"};
+const LIVE={"1": {"c": "lv-001", "bs": "103.337% 284.383%", "bp": "0.000% 0.000%", "layers": [{"cls": "m-drift-r", "l": 62.56, "t": 0.0, "w": 37.44, "h": 10.353, "bs": "184.076% 1830.811%", "bp": "0.000% 37.196%", "d": "0.30s"}, {"cls": "m-drift-l", "l": 0.0, "t": 14.773, "w": 15.58, "h": 14.55, "bs": "442.347% 1302.692%", "bp": "0.000% 44.004%", "d": "0.75s"}, {"cls": "m-float", "l": 15.501, "t": 5.708, "w": 68.919, "h": 48.517, "bs": "100.000% 390.657%", "bp": "0.000% 64.921%", "d": "1.20s"}, {"cls": "m-drift-r", "l": 42.13, "t": 79.91, "w": 57.87, "h": 19.978, "bs": "119.093% 948.739%", "bp": "0.000% 82.607%", "d": "1.65s"}, {"cls": "m-sway", "l": 7.393, "t": 67.04, "w": 22.655, "h": 29.491, "bs": "304.211% 642.694%", "bp": "0.000% 100.000%", "d": "2.10s"}]}, "4": {"c": "lv-004", "bs": "100.000% 143.745%", "bp": "0.000% 0.000%", "layers": [{"cls": "m-float", "l": 29.253, "t": 6.995, "w": 41.415, "h": 29.155, "bs": "161.036% 328.599%", "bp": "0.000% 100.000%", "d": "0.30s"}]}, "5": {"c": "lv-005", "bs": "100.000% 121.075%", "bp": "0.000% 0.000%", "layers": [{"cls": "m-swing", "l": 60.493, "t": 69.334, "w": 27.107, "h": 13.374, "bs": "246.041% 603.347%", "bp": "0.000% 99.002%", "d": "0.30s"}, {"cls": "", "l": 86.089, "t": 70.341, "w": 1.033, "h": 0.672, "bs": "6453.846% 12016.667%", "bp": "0.000% 100.000%", "d": "0s"}]}, "17": {"c": "lv-017", "bs": "100.000% 129.975%", "bp": "0.000% 0.000%", "layers": [{"cls": "m-bob", "l": 66.057, "t": 67.487, "w": 23.211, "h": 16.228, "bs": "287.329% 533.793%", "bp": "0.000% 94.674%", "d": "0.30s"}, {"cls": "", "l": 65.978, "t": 68.215, "w": 6.359, "h": 3.749, "bs": "1048.750% 2310.448%", "bp": "0.000% 100.000%", "d": "0s"}]}, "25": {"c": "lv-025", "bs": "100.000% 117.968%", "bp": "0.000% 0.000%", "layers": [{"cls": "m-hop", "l": 66.137, "t": 13.766, "w": 15.898, "h": 11.975, "bs": "419.500% 656.542%", "bp": "0.000% 100.000%", "d": "0.30s"}]}, "27": {"c": "lv-027", "bs": "103.337% 172.796%", "bp": "0.000% 0.000%", "layers": [{"cls": "m-float", "l": 15.501, "t": 25.686, "w": 68.919, "h": 48.517, "bs": "100.000% 237.370%", "bp": "0.000% 100.000%", "d": "0.30s"}]}, "60": {"c": "lv-060", "bs": "136.234% 218.220%", "bp": "0.000% 0.000%", "layers": [{"cls": "m-wobble", "l": 4.293, "t": 35.534, "w": 89.984, "h": 41.242, "bs": "100.972% 352.646%", "bp": "0.000% 63.963%", "d": "0.30s"}, {"cls": "", "l": 4.69, "t": 43.089, "w": 90.859, "h": 27.476, "bs": "100.000% 529.328%", "bp": "0.000% 91.461%", "d": "0s"}, {"cls": "m-hop", "l": 81.797, "t": 36.15, "w": 15.262, "h": 10.073, "bs": "595.312% 1443.889%", "bp": "0.000% 100.000%", "d": "0.75s"}]}, "78": {"c": "lv-078", "bs": "100.000% 121.075%", "bp": "0.000% 0.000%", "layers": [{"cls": "m-swing", "l": 60.731, "t": 16.956, "w": 27.186, "h": 13.374, "bs": "245.322% 603.347%", "bp": "0.000% 99.002%", "d": "0.30s"}, {"cls": "", "l": 63.037, "t": 16.844, "w": 1.272, "h": 0.672, "bs": "5243.750% 12016.667%", "bp": "0.000% 100.000%", "d": "0s"}]}, "79": {"c": "lv-079", "bs": "147.080% 126.952%", "bp": "0.000% 0.000%", "layers": [{"cls": "m-drift-r", "l": 1.113, "t": 72.86, "w": 98.092, "h": 17.963, "bs": "100.000% 471.028%", "bp": "0.000% 100.000%", "d": "0.30s"}]}, "82": {"c": "lv-082", "bs": "100.000% 122.166%", "bp": "0.000% 0.000%", "layers": [{"cls": "m-sway", "l": 75.517, "t": 7.89, "w": 11.288, "h": 14.773, "bs": "590.845% 551.136%", "bp": "0.000% 100.000%", "d": "0.30s"}]}, "83": {"c": "lv-083", "bs": "148.749% 169.353%", "bp": "0.000% 0.000%", "layers": [{"cls": "m-twinkle", "l": 80.922, "t": 2.854, "w": 11.765, "h": 3.805, "bs": "843.243% 2966.176%", "bp": "0.000% 61.108%", "d": "0.30s"}, {"cls": "m-wave", "l": 0.0, "t": 34.639, "w": 99.205, "h": 42.417, "bs": "100.000% 266.095%", "bp": "0.000% 100.000%", "d": "0.75s"}]}, "84": {"c": "lv-084", "bs": "100.000% 122.166%", "bp": "0.000% 0.000%", "layers": [{"cls": "m-bob", "l": 65.739, "t": 12.255, "w": 21.145, "h": 14.773, "bs": "315.414% 551.136%", "bp": "0.000% 100.000%", "d": "0.30s"}]}, "85": {"c": "lv-085", "bs": "112.157% 152.981%", "bp": "0.000% 0.000%", "layers": [{"cls": "m-twinkle", "l": 82.353, "t": 3.246, "w": 6.439, "h": 4.421, "bs": "1161.728% 2306.329%", "bp": "0.000% 68.330%", "d": "0.30s"}, {"cls": "m-wave", "l": 0.0, "t": 52.434, "w": 74.801, "h": 30.89, "bs": "100.000% 330.072%", "bp": "0.000% 100.000%", "d": "0.75s"}]}, "86": {"c": "lv-086", "bs": "100.000% 113.854%", "bp": "0.000% 0.000%", "layers": [{"cls": "m-swing", "l": 72.496, "t": 8.898, "w": 18.76, "h": 9.233, "bs": "355.508% 821.818%", "bp": "0.000% 100.000%", "d": "0.30s"}]}, "87": {"c": "lv-087", "bs": "100.000% 120.991%", "bp": "0.000% 0.000%", "layers": [{"cls": "m-twinkle", "l": 79.65, "t": 3.805, "w": 10.572, "h": 3.078, "bs": "630.827% 2620.000%", "bp": "0.000% 85.931%", "d": "0.30s"}, {"cls": "m-wave", "l": 0.0, "t": 59.709, "w": 58.903, "h": 10.912, "bs": "113.225% 738.974%", "bp": "0.000% 100.000%", "d": "0.75s"}]}, "88": {"c": "lv-088", "bs": "100.000% 125.105%", "bp": "0.000% 0.000%", "layers": [{"cls": "m-hop", "l": 65.58, "t": 13.095, "w": 20.906, "h": 16.732, "bs": "319.011% 498.328%", "bp": "0.000% 100.000%", "d": "0.30s"}]}, "89": {"c": "lv-089", "bs": "143.743% 178.421%", "bp": "0.000% 0.000%", "layers": [{"cls": "m-twinkle", "l": 83.545, "t": 2.35, "w": 5.326, "h": 4.533, "bs": "1800.000% 2623.457%", "bp": "0.000% 58.268%", "d": "0.30s"}, {"cls": "m-wave", "l": 0.0, "t": 27.476, "w": 95.866, "h": 47.734, "bs": "100.000% 249.121%", "bp": "0.000% 100.000%", "d": "0.75s"}]}, "92": {"c": "lv-092", "bs": "100.000% 113.014%", "bp": "0.000% 0.000%", "layers": [{"cls": "m-swing", "l": 70.191, "t": 13.542, "w": 17.647, "h": 8.674, "bs": "377.928% 868.387%", "bp": "0.000% 100.000%", "d": "0.30s"}]}, "94": {"c": "lv-094", "bs": "100.000% 116.457%", "bp": "0.000% 0.000%", "layers": [{"cls": "m-sway", "l": 74.801, "t": 11.36, "w": 8.426, "h": 10.968, "bs": "791.509% 707.653%", "bp": "0.000% 100.000%", "d": "0.30s"}]}, "95": {"c": "lv-095", "bs": "106.913% 128.883%", "bp": "0.000% 0.000%", "layers": [{"cls": "m-twinkle", "l": 81.876, "t": 1.903, "w": 11.606, "h": 3.917, "bs": "614.384% 2192.857%", "bp": "0.000% 81.297%", "d": "0.30s"}, {"cls": "m-wave", "l": 0.0, "t": 73.027, "w": 71.304, "h": 15.333, "bs": "100.000% 560.219%", "bp": "0.000% 100.000%", "d": "0.75s"}]}, "97": {"c": "lv-097", "bs": "100.000% 106.045%", "bp": "0.000% 0.000%", "layers": [{"cls": "m-twinkle", "l": 75.994, "t": 2.63, "w": 16.216, "h": 4.029, "bs": "411.275% 1754.167%", "bp": "0.000% 100.000%", "d": "0.30s"}]}, "98": {"c": "lv-098", "bs": "141.240% 136.020%", "bp": "0.000% 0.000%", "layers": [{"cls": "m-wave", "l": 5.723, "t": 69.67, "w": 94.197, "h": 12.703, "bs": "100.000% 713.656%", "bp": "0.000% 85.499%", "d": "0.30s"}, {"cls": "m-swing", "l": 64.785, "t": 15.949, "w": 23.052, "h": 11.304, "bs": "408.621% 801.980%", "bp": "0.000% 100.000%", "d": "0.75s"}]}, "99": {"c": "lv-099", "bs": "100.000% 131.990%", "bp": "0.000% 0.000%", "layers": [{"cls": "m-bob", "l": 61.447, "t": 69.726, "w": 27.027, "h": 18.914, "bs": "246.765% 465.089%", "bp": "0.000% 96.515%", "d": "0.30s"}, {"cls": "", "l": 62.639, "t": 72.02, "w": 2.703, "h": 2.406, "bs": "2467.647% 3655.814%", "bp": "0.000% 100.000%", "d": "0s"}]}, "100": {"c": "lv-100", "bs": "141.240% 141.478%", "bp": "0.000% 0.000%", "layers": [{"cls": "m-wave", "l": 5.723, "t": 68.719, "w": 94.197, "h": 12.871, "bs": "100.000% 732.609%", "bp": "0.000% 81.856%", "d": "0.30s"}, {"cls": "m-sway", "l": 70.668, "t": 12.255, "w": 11.367, "h": 14.773, "bs": "828.671% 638.258%", "bp": "0.000% 100.000%", "d": "0.75s"}]}, "101": {"c": "lv-101", "bs": "134.088% 249.538%", "bp": "0.000% 0.000%", "layers": [{"cls": "", "l": 0.0, "t": 2.238, "w": 89.428, "h": 77.28, "bs": "100.000% 215.206%", "bp": "0.000% 74.859%", "d": "0s"}, {"cls": "m-hop", "l": 74.404, "t": 68.383, "w": 15.183, "h": 11.192, "bs": "589.005% 1486.000%", "bp": "0.000% 92.785%", "d": "0.30s"}, {"cls": "m-hop", "l": 61.367, "t": 68.439, "w": 14.626, "h": 11.192, "bs": "611.413% 1486.000%", "bp": "0.000% 100.000%", "d": "0.75s"}]}, "102": {"c": "lv-102", "bs": "100.000% 122.166%", "bp": "0.000% 0.000%", "layers": [{"cls": "m-bob", "l": 65.739, "t": 12.255, "w": 21.145, "h": 14.773, "bs": "315.414% 551.136%", "bp": "0.000% 100.000%", "d": "0.30s"}]}, "103": {"c": "lv-103", "bs": "120.024% 229.135%", "bp": "0.000% 0.000%", "layers": [{"cls": "m-twinkle", "l": 79.332, "t": 3.358, "w": 6.677, "h": 3.805, "bs": "1198.810% 4013.235%", "bp": "0.000% 44.758%", "d": "0.30s"}, {"cls": "m-swing", "l": 61.447, "t": 69.894, "w": 27.027, "h": 13.318, "bs": "296.176% 1146.639%", "bp": "0.000% 50.542%", "d": "0.75s"}, {"cls": "m-wave", "l": 0.0, "t": 6.939, "w": 80.048, "h": 68.942, "bs": "100.000% 221.510%", "bp": "0.000% 100.000%", "d": "1.20s"}]}, "104": {"c": "lv-104", "bs": "100.000% 116.961%", "bp": "0.000% 0.000%", "layers": [{"cls": "m-swing", "l": 64.785, "t": 15.949, "w": 23.052, "h": 11.304, "bs": "289.310% 689.604%", "bp": "0.000% 100.000%", "d": "0.30s"}]}, "105": {"c": "lv-105", "bs": "100.000% 138.287%", "bp": "0.000% 0.000%", "layers": [{"cls": "m-twinkle", "l": 74.165, "t": 2.35, "w": 12.162, "h": 4.533, "bs": "548.366% 2033.333%", "bp": "0.000% 76.054%", "d": "0.30s"}, {"cls": "m-sway", "l": 66.932, "t": 60.996, "w": 16.057, "h": 20.985, "bs": "415.347% 439.200%", "bp": "0.000% 100.000%", "d": "0.75s"}]}, "106": {"c": "lv-106", "bs": "100.000% 122.250%", "bp": "0.000% 0.000%", "layers": [{"cls": "m-hop", "l": 65.024, "t": 10.744, "w": 21.542, "h": 14.829, "bs": "309.594% 549.434%", "bp": "0.000% 100.000%", "d": "0.30s"}]}, "107": {"c": "lv-107", "bs": "100.000% 126.784%", "bp": "0.000% 0.000%", "layers": [{"cls": "m-twinkle", "l": 74.96, "t": 3.525, "w": 15.342, "h": 4.533, "bs": "434.715% 1864.198%", "bp": "0.000% 83.345%", "d": "0.30s"}, {"cls": "m-swing", "l": 61.447, "t": 66.144, "w": 27.027, "h": 13.318, "bs": "246.765% 634.454%", "bp": "0.000% 100.000%", "d": "0.75s"}]}, "108": {"c": "lv-108", "bs": "141.240% 140.134%", "bp": "0.000% 0.000%", "layers": [{"cls": "m-wave", "l": 5.723, "t": 68.719, "w": 94.197, "h": 12.479, "bs": "100.000% 748.430%", "bp": "0.000% 82.365%", "d": "0.30s"}, {"cls": "m-hop", "l": 65.342, "t": 10.409, "w": 20.668, "h": 14.27, "bs": "455.769% 654.510%", "bp": "0.000% 100.000%", "d": "0.75s"}]}, "109": {"c": "lv-109", "bs": "134.088% 247.103%", "bp": "0.000% 0.000%", "layers": [{"cls": "", "l": 0.0, "t": 2.462, "w": 89.428, "h": 77.057, "bs": "100.000% 213.725%", "bp": "0.000% 76.054%", "d": "0s"}, {"cls": "m-sway", "l": 66.932, "t": 56.184, "w": 16.057, "h": 20.985, "bs": "556.931% 784.800%", "bp": "0.000% 100.000%", "d": "0.30s"}]}, "110": {"c": "lv-110", "bs": "141.240% 137.028%", "bp": "0.000% 0.000%", "layers": [{"cls": "m-wave", "l": 5.723, "t": 68.719, "w": 94.197, "h": 13.374, "bs": "100.000% 682.845%", "bp": "0.000% 85.499%", "d": "0.30s"}, {"cls": "m-swing", "l": 64.785, "t": 13.99, "w": 23.052, "h": 11.304, "bs": "408.621% 807.921%", "bp": "0.000% 100.000%", "d": "0.75s"}]}, "111": {"c": "lv-111", "bs": "133.611% 244.165%", "bp": "0.000% 0.000%", "layers": [{"cls": "", "l": 0.0, "t": 3.749, "w": 89.11, "h": 75.769, "bs": "100.000% 214.771%", "bp": "0.000% 76.641%", "d": "0s"}, {"cls": "m-hop", "l": 61.765, "t": 62.059, "w": 25.596, "h": 20.313, "bs": "348.137% 801.102%", "bp": "0.000% 100.000%", "d": "0.30s"}]}, "112": {"c": "lv-112", "bs": "100.000% 122.166%", "bp": "0.000% 0.000%", "layers": [{"cls": "m-sway", "l": 70.668, "t": 12.255, "w": 11.367, "h": 14.773, "bs": "586.713% 551.136%", "bp": "0.000% 100.000%", "d": "0.30s"}]}, "113": {"c": "lv-113", "bs": "100.000% 141.730%", "bp": "0.000% 0.000%", "layers": [{"cls": "m-twinkle", "l": 77.027, "t": 2.91, "w": 11.844, "h": 5.148, "bs": "563.087% 1834.783%", "bp": "0.000% 74.624%", "d": "0.30s"}, {"cls": "m-hop", "l": 59.618, "t": 60.045, "w": 30.525, "h": 22.664, "bs": "218.490% 416.790%", "bp": "0.000% 100.000%", "d": "0.75s"}]}, "114": {"c": "lv-114", "bs": "100.000% 126.029%", "bp": "0.000% 0.000%", "layers": [{"cls": "m-hop", "l": 63.116, "t": 10.185, "w": 25.437, "h": 17.348, "bs": "262.188% 484.194%", "bp": "0.000% 100.000%", "d": "0.30s"}]}, "115": {"c": "lv-115", "bs": "149.940% 180.101%", "bp": "0.000% 0.000%", "layers": [{"cls": "m-twinkle", "l": 81.479, "t": 2.071, "w": 6.041, "h": 4.757, "bs": "1655.263% 2523.529%", "bp": "0.000% 57.816%", "d": "0.30s"}, {"cls": "m-wave", "l": 0.0, "t": 21.489, "w": 100.0, "h": 48.629, "bs": "100.000% 246.835%", "bp": "0.000% 100.000%", "d": "0.75s"}]}, "116": {"c": "lv-116", "bs": "141.240% 136.776%", "bp": "0.000% 0.000%", "layers": [{"cls": "m-wave", "l": 5.723, "t": 68.774, "w": 94.197, "h": 13.206, "bs": "100.000% 690.254%", "bp": "0.000% 85.499%", "d": "0.30s"}, {"cls": "m-swing", "l": 64.785, "t": 14.046, "w": 23.052, "h": 11.304, "bs": "408.621% 806.436%", "bp": "0.000% 100.000%", "d": "0.75s"}]}, "117": {"c": "lv-117", "bs": "136.234% 247.271%", "bp": "0.000% 0.000%", "layers": [{"cls": "", "l": 0.0, "t": 3.749, "w": 90.859, "h": 75.881, "bs": "100.000% 217.183%", "bp": "0.000% 74.953%", "d": "0s"}, {"cls": "m-hop", "l": 58.426, "t": 58.814, "w": 35.135, "h": 22.272, "bs": "258.597% 739.950%", "bp": "0.000% 100.000%", "d": "0.30s"}]}, "118": {"c": "lv-118", "bs": "100.000% 124.349%", "bp": "0.000% 0.000%", "layers": [{"cls": "m-bob", "l": 64.07, "t": 67.767, "w": 23.132, "h": 16.228, "bs": "288.316% 510.690%", "bp": "0.000% 100.000%", "d": "0.30s"}]}, "120": {"c": "lv-120", "bs": "101.311% 204.618%", "bp": "0.000% 0.000%", "layers": [{"cls": "m-float", "l": 16.216, "t": 26.133, "w": 67.568, "h": 47.622, "bs": "100.000% 286.369%", "bp": "0.000% 75.095%", "d": "0.30s"}, {"cls": "", "l": 99.921, "t": 67.991, "w": 0.079, "h": 22.104, "bs": "85000.000% 616.962%", "bp": "0.000% 100.000%", "d": "0s"}]}, "121": {"c": "lv-121", "bs": "149.940% 362.888%", "bp": "0.000% 0.000%", "layers": [{"cls": "m-float", "l": 5.405, "t": 14.382, "w": 90.7, "h": 63.85, "bs": "110.254% 378.791%", "bp": "0.000% 37.441%", "d": "0.30s"}, {"cls": "", "l": 0.0, "t": 67.767, "w": 100.0, "h": 22.328, "bs": "100.000% 1083.208%", "bp": "0.000% 59.444%", "d": "0s"}, {"cls": "m-drift-r", "l": 35.93, "t": 81.03, "w": 64.07, "h": 18.97, "bs": "156.079% 1274.926%", "bp": "0.000% 68.566%", "d": "0.75s"}, {"cls": "m-drift-r", "l": 42.846, "t": 0.0, "w": 57.154, "h": 13.43, "bs": "174.965% 1800.833%", "bp": "0.000% 75.208%", "d": "1.20s"}, {"cls": "", "l": 9.936, "t": 34.135, "w": 83.943, "h": 37.381, "bs": "119.129% 647.006%", "bp": "0.000% 90.586%", "d": "0s"}, {"cls": "m-drift-l", "l": 0.0, "t": 0.0, "w": 55.246, "h": 19.25, "bs": "181.007% 1256.395%", "bp": "0.000% 100.000%", "d": "1.65s"}]}, "122": {"c": "lv-122", "bs": "130.870% 353.904%", "bp": "0.000% 0.000%", "layers": [{"cls": "m-twinkle", "l": 1.59, "t": 46.447, "w": 16.375, "h": 20.705, "bs": "533.010% 1139.189%", "bp": "0.000% 30.975%", "d": "0.30s"}, {"cls": "m-twinkle", "l": 31.638, "t": 46.95, "w": 16.693, "h": 19.978, "bs": "522.857% 1180.672%", "bp": "0.000% 40.461%", "d": "0.75s"}, {"cls": "", "l": 31.081, "t": 50.532, "w": 17.409, "h": 12.479, "bs": "501.370% 1890.135%", "bp": "0.000% 48.046%", "d": "0s"}, {"cls": "m-breathe-b", "l": 12.083, "t": 56.128, "w": 82.353, "h": 43.816, "bs": "105.985% 538.314%", "bp": "0.000% 62.383%", "d": "1.20s"}, {"cls": "", "l": 12.719, "t": 56.016, "w": 87.281, "h": 43.872, "bs": "100.000% 537.628%", "bp": "0.000% 85.223%", "d": "0s"}, {"cls": "m-float", "l": 36.725, "t": 5.652, "w": 26.471, "h": 18.635, "bs": "329.730% 1265.766%", "bp": "0.000% 95.518%", "d": "1.65s"}, {"cls": "m-drift-l", "l": 0.0, "t": 90.263, "w": 23.609, "h": 9.737, "bs": "369.697% 2422.414%", "bp": "0.000% 100.000%", "d": "2.10s"}]}};
+
+function fxRng(seed) { let x = (seed * 2654435761) % 4294967296; return function () { x = (x * 1664525 + 1013904223) % 4294967296; return x / 4294967296; }; }
+function fxKind(k) {
+  if (k === 1) return 'cover';
+  if (k >= 28 && k <= 75 && k % 2 === 1) return 'tip';
+  if ([2, 3, 7, 8, 9, 20, 21, 23, 24, 27, 76, 77, 120, 121].indexOf(k) >= 0) return 'plate';
+  return 'none';
+}
+function fxFor(k) {
+  const r = fxRng(k * 31 + 7), out = [];
+  const PAL = ['#4fb7c4', '#f2b630', '#e2629f', '#8c6fd6'];
+  const add = (t, x, y, s, d, c) => {
+    const d2 = (d + (t === 'star' ? 0.9 : 0.75)).toFixed(2);
+    out.push({ t: t, o: t === 'sweep' ? 'full' : '', x: x.toFixed(1), y: y.toFixed(1), s: s.toFixed(1), c: c || '#fff3b0',
+      d: (t === 'spark' || t === 'star' || t === 'note') ? d.toFixed(2) + 's, ' + d2 + 's' : d.toFixed(2) + 's',
+      note: t === 'note' || t === 'rise', spark: t === 'spark', star: t === 'star' });
+  };
+  const kind = fxKind(k);
+  if (kind === 'none') return out;
+  add('sweep', 0, 0, 100, 0.1);
+  if (kind === 'plate') return out;
+  if (kind === 'cover') {
+    for (let i = 0; i < 9; i++) { const a = (i / 9) * Math.PI * 2 + 0.3; add('spark', 50 + 41 * Math.cos(a), 31.5 + 29 * Math.sin(a), 3 + r() * 2.8, 0.25 + i * 0.14); }
+    add('rise', 66, 74, 4.5, 0.6, '#8fdde0'); add('rise', 74, 68, 3.8, 2.6, '#ffd86b'); add('rise', 60, 66, 3.4, 4.2, '#f39ac7');
+  } else if (kind === 'back') {
+    add('halo', 50, 12.5, 34, 0.1);
+    for (let i = 0; i < 6; i++) { const a = (i / 6) * Math.PI * 2; add('spark', 50 + 21 * Math.cos(a), 12.5 + 14 * Math.sin(a), 2.6 + r() * 2, 0.3 + i * 0.15); }
+    for (let i = 0; i < 6; i++) add('star', 8 + r() * 84, 26 + r() * 22, 1.8 + r() * 1.6, 0.6 + i * 0.2);
+  } else if (kind === 'part' || kind === 'scene') {
+    const n = kind === 'part' ? 7 : 10;
+    for (let i = 0; i < n; i++) add('spark', 8 + r() * 84, 6 + r() * 80, 2.4 + r() * 3, 0.2 + i * 0.12);
+    for (let i = 0; i < 3; i++) add('rise', 15 + r() * 70, 88 + r() * 6, 4 + r() * 2.5, 0.4 + i * 2.1, PAL[i % 4]);
+  } else if (kind === 'play') {
+    const spots = [[11, 40], [89, 45], [13, 83], [87, 80]];
+    spots.forEach((p, i) => add('note', p[0] + (r() - 0.5) * 4, p[1] + (r() - 0.5) * 5, 5.5 + r() * 2, 0.2 + i * 0.16, PAL[(i + k) % 4]));
+    add('spark', 74 + r() * 12, 8 + r() * 4, 3.4, 0.9); add('spark', 18 + r() * 10, 10 + r() * 4, 2.6, 1.1);
+  } else if (kind === 'lull') {
+    const SC = ['#f2b630', '#8c6fd6', '#e2629f'];
+    for (let i = 0; i < 7; i++) add('star', 8 + r() * 84, 3 + r() * 17, 1.8 + r() * 1.8, 0.2 + i * 0.22, SC[i % 3]);
+    add('note', 90, 36, 4.6, 1.2, '#8c6fd6');
+  } else if (kind === 'tip' || kind === 'tipn') {
+    const t = kind === 'tip' ? 'spark' : 'star';
+    for (let i = 0; i < 3; i++) add(t, 12 + r() * 76, 4 + r() * 8, 2.2 + r() * 1.6, 0.3 + i * 0.18, kind === 'tip' ? '#f2b630' : ['#f2b630', '#8c6fd6', '#e2629f'][i % 3]);
+  } else {
+    add('spark', 7, 4.5, 2.6, 0.4, '#f2b630'); add('spark', 93, 4.5, 2.2, 0.6, '#e2629f');
+  }
+  return out;
+}
+
+(function(){
+const N=122,LAST=61;
+const $=id=>document.getElementById(id);
+const spreadOf=i=>i<=0?0:Math.floor((i+1)/2), leftOf=s=>s===0?-1:2*s-1, rightOf=s=>s===LAST?-1:2*s;
+const label=i=>i===0?'Bìa trước':i===N-1?'Bìa sau':(i-1>=2?String(i-1):'');
+const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const MS=reduced?0:850;
+let st={s:0,p:0,single:innerWidth<720,busy:false};
+const book=$('book'),hl=$('hl'),hr=$('hr'),leaf=$('leaf');
+function setImg(half,i){const im=half.querySelector('img');if(i<0){half.classList.add('empty');im.style.visibility='hidden';im.removeAttribute('src');im.alt='';}else{half.classList.remove('empty');im.style.visibility='';im.src=BOOK.img[i];im.alt=BOOK.alt[i];}}
+const cache={};function preload(i){if(i>=0&&i<N&&!cache[i]){const im=new Image();im.src=BOOK.img[i];cache[i]=im;}}
+function clearFx(){document.querySelectorAll('.fxlayer,.live').forEach(e=>e.remove());}
+function renderLive(half,k){const x=LIVE[k];if(!x)return;const d=document.createElement('div');d.className='live';d.setAttribute('aria-hidden','true');
+  const b=document.createElement('span');b.className='lvb '+x.c;b.style.backgroundSize=x.bs;b.style.backgroundPosition=x.bp;d.appendChild(b);
+  x.layers.forEach(y=>{const e=document.createElement('span');e.className='lvl '+x.c+' '+y.cls;Object.assign(e.style,{left:y.l+'%',top:y.t+'%',width:y.w+'%',height:y.h+'%',backgroundSize:y.bs,backgroundPosition:y.bp,animationDelay:y.d});d.appendChild(e);});
+  half.appendChild(d);}
+function renderFx(half,k){if(reduced||k<1)return;const L=document.createElement('div');L.className='fxlayer';L.setAttribute('aria-hidden','true');
+  fxFor(k).forEach(f=>{const o=document.createElement('span');o.className='fx '+f.o;o.style.left=f.x+'%';o.style.top=f.y+'%';o.style.width=f.s+'%';
+    const i=document.createElement('span');i.className='fxi '+f.t;i.style.animationDelay=f.d;i.style.color=f.c;
+    if(f.note)i.innerHTML=FXSVG.note;else if(f.spark)i.innerHTML=FXSVG.spark;else if(f.star)i.innerHTML=FXSVG.star;o.appendChild(i);L.appendChild(o);});
+  half.appendChild(L);}
+function draw(){
+  clearFx();
+  book.className='book '+(st.single?'single':'double');
+  hr.classList.toggle('hide',st.single);
+  let first,lab;
+  if(!st.single){const a=leftOf(st.s),b=rightOf(st.s);setImg(hl,a);setImg(hr,b);
+    book.style.transform='translateX('+(st.s===0?'-25%':st.s===LAST?'25%':'0%')+')';
+    $('bshadow').style.opacity=(st.s===0||st.s===LAST)?.55:1;
+    first=a<0?0:a;
+    if(a<0)lab='Bìa trước';else if(b<0)lab='Bìa sau';else{const la=label(a),lb=label(b);lab=la&&lb?'Trang '+la+' – '+lb:(la||lb?'Trang '+(la||lb):'Trang lót');}
+    $('prev').disabled=$('hitL').disabled=st.s===0;$('next').disabled=$('hitR').disabled=st.s===LAST;
+    if(a>=0)renderLive(hl,a+1);if(b>=0)renderLive(hr,b+1);
+    renderFx(hl,a+1);renderFx(hr,b+1);
+    for(let k=-2;k<=4;k++)preload(first+k);
+  }else{setImg(hl,st.p);book.style.transform='none';$('bshadow').style.opacity=1;first=st.p;
+    const l=label(st.p);lab=(st.p===0||st.p===N-1)?l:(l?'Trang '+l:'Trang lót');
+    $('prev').disabled=$('hitL').disabled=st.p===0;$('next').disabled=$('hitR').disabled=st.p===N-1;
+    renderLive(hl,st.p+1);
+    renderFx(hl,st.p+1);
+    for(let k=-1;k<=3;k++)preload(first+k);}
+  $('corner').classList.toggle('hide',st.single?st.p===N-1:st.s===LAST);
+  $('plabel').textContent=lab;const r=$('range');r.value=first+1;r.style.setProperty('--pct',Math.round(first/(N-1)*100)+'%');
+  $('modeTxt').textContent=st.single?'Xem trang đôi':'Xem từng trang';
+  history.replaceState(null,'','#trang-'+(first+1));
+}
+function faces(front,back,paper){const f=leaf.querySelector('.front img'),b=leaf.querySelector('.back img');f.src=BOOK.img[front];
+  if(back>=0){b.style.visibility='';b.src=BOOK.img[back];}else{b.style.visibility='hidden';}
+  leaf.querySelector('.back').classList.toggle('paper',!!paper);}
+function go(dir){
+  if(st.busy)return;
+  const cur=st.single?st.p:st.s,max=st.single?N-1:LAST,to=cur+dir;if(to<0||to>max)return;
+  const commit=()=>{if(st.single){st.p=to;st.s=spreadOf(to);}else{st.s=to;st.p=Math.max(0,leftOf(to));}leaf.className='leaf hide';$('corner').style.opacity='';st.busy=false;draw();};
+  if(!MS){commit();return;}
+  st.busy=true;$('corner').style.opacity=0;clearFx();
+  let cls;
+  if(!st.single){
+    if(dir>0){setImg(hl,leftOf(cur));setImg(hr,rightOf(to));faces(rightOf(cur),leftOf(to));cls='nd';}
+    else{setImg(hl,leftOf(to));setImg(hr,rightOf(cur));faces(leftOf(cur),rightOf(to));cls='pd';}
+    book.style.transform='translateX('+(to===0?'-25%':to===LAST?'25%':'0%')+')';
+    $('bshadow').style.opacity=(to===0||to===LAST)?.55:1;
+  }else{
+    if(dir>0){setImg(hl,to);faces(cur,-1,true);cls='ns';}else{setImg(hl,cur);faces(to,-1,true);cls='ps';}
+  }
+  leaf.className='leaf '+cls;void leaf.offsetWidth;
+  setTimeout(commit,MS);
+}
+function jump(i){i=Math.max(0,Math.min(N-1,i));st.p=i;st.s=spreadOf(i);draw();}
+$('next').onclick=$('hitR').onclick=()=>go(1);$('prev').onclick=$('hitL').onclick=()=>go(-1);
+$('range').oninput=e=>{const r=e.target;r.style.setProperty('--pct',Math.round((r.value-1)/(N-1)*100)+'%');};
+$('range').onchange=e=>jump(+e.target.value-1);
+$('mode').onclick=()=>{const cur=st.single?st.p:Math.max(0,leftOf(st.s));st.single=!st.single;jump(cur);};
+$('fs').onclick=()=>{const d=document;if(d.fullscreenElement)d.exitFullscreen();else if(d.documentElement.requestFullscreen)d.documentElement.requestFullscreen();};
+addEventListener('keydown',e=>{if(e.target.tagName==='INPUT')return;if(e.key==='ArrowRight'||e.key==='PageDown')go(1);else if(e.key==='ArrowLeft'||e.key==='PageUp')go(-1);else if(e.key==='Escape')closeToc();else if(e.key==='Home')jump(0);else if(e.key==='End')jump(N-1);});
+let tx=null,ty=0;book.addEventListener('touchstart',e=>{tx=e.changedTouches[0].clientX;ty=e.changedTouches[0].clientY;},{passive:true});
+book.addEventListener('touchend',e=>{if(tx==null)return;const dx=e.changedTouches[0].clientX-tx,dy=e.changedTouches[0].clientY-ty;tx=null;if(Math.abs(dx)>40&&Math.abs(dx)>Math.abs(dy)){e.preventDefault();go(dx<0?1:-1);}});
+let lastW=innerWidth;addEventListener('resize',()=>{const sm=innerWidth<720;if(sm!==(lastW<720)&&!st.busy){const cur=st.single?st.p:Math.max(0,leftOf(st.s));st.single=sm;jump(cur);}lastW=innerWidth;});
+// TOC
+const body=$('tocBody');
+function sec(title,color,items,chips){const s=document.createElement('section');s.style.cssText='display:flex;flex-direction:column;gap:2px';
+  const h=document.createElement('h3');h.textContent=title;h.style.cssText='margin:0 0 6px 4px;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:'+color;s.appendChild(h);
+  const wrap=chips?document.createElement('div'):s;if(chips){wrap.style.cssText='display:flex;flex-wrap:wrap;gap:8px';s.appendChild(wrap);}
+  items.forEach(it=>{const b=document.createElement('button');b.type='button';b.className=chips?'chip':'ti';
+    if(chips)b.textContent=it.t;else{const a=document.createElement('span');a.textContent=it.t;const p=document.createElement('span');p.className='pg';p.textContent='tr. '+it.n;b.append(a,p);}
+    b.onclick=()=>{jump(it.i);closeToc();};wrap.appendChild(b);});
+  body.appendChild(s);}
+sec('Bắt đầu từ đâu?','#6b4a7e',BOOK.quick,true);sec('Mục lục','#6b4a7e',BOOK.toc);sec('Đồng dao · 24 bài để chơi','#2d7f94',BOOK.dd);sec('Hát ru · 19 bài để ngủ','#a3246f',BOOK.hr);
+function openToc(){$('tocWrap').classList.remove('hide');$('tocBtn').setAttribute('aria-expanded','true');$('tocClose').focus();}
+function closeToc(){if($('tocWrap').classList.contains('hide'))return;$('tocWrap').classList.add('hide');$('tocBtn').setAttribute('aria-expanded','false');$('tocBtn').focus();}
+$('tocBtn').onclick=openToc;$('tocClose').onclick=$('scrim').onclick=closeToc;
+const m=location.hash.match(/trang-(\d+)/);if(m)jump(+m[1]-1);else draw();
+})();
+</script>
+<noscript><p style="color:#fff;padding:20px">Trình duyệt cần bật JavaScript để lật sách.</p></noscript>
+</body>
+</html>

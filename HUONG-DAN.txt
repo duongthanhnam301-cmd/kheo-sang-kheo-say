@@ -1,0 +1,14 @@
+KHÉO SÀNG KHÉO SẢY – Bản sách lật trang HTML5
+
+Nội dung gói:
+  index.html   – trang đọc sách (lật trang, mục lục, hoạ tiết chuyển động)
+  pages/       – 122 trang sách (JPG, 839×1191 px)
+
+Cách dùng:
+  • Mở index.html bằng trình duyệt để xem thử trên máy.
+  • Đăng lên web: tải nguyên thư mục lên bất kỳ hosting tĩnh nào
+    (Netlify, Vercel, GitHub Pages, hosting của nhà xuất bản…).
+  • Liên kết tới trang cụ thể: index.html#trang-28
+  • Phím tắt: ← → lật trang, Home/End về bìa trước/bìa sau, Esc đóng mục lục.
+
+Phông chữ giao diện tải từ Google Fonts; khi không có mạng sẽ dùng phông hệ thống.
